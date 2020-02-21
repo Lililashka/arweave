@@ -1,10 +1,11 @@
-import * as React from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import Footer from './Footer'
 import NavBar from './Navbar'
 import Sidebar from './Sidebar'
 import CookiesBanner from '../CookiesBanner'
 import HexagonBackground from '../HexagonBackground'
+import ScrollLock from 'react-scrolllock';
 
 type Props = {
   title?: string,
@@ -20,30 +21,37 @@ const Layout: React.FunctionComponent<Props> = ({
   className = "",
   withHexagonBg = false
 }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+
+  function toogleSidebar(isOpen: boolean) {
+    setIsSidebarOpen(isOpen);
+  }
 
   return (
     <div className="layout">
-      <Head>
+      < Head >
         <link rel="icon" type="image/png" href="/favicon-183x183.png" />
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content={desc} />
         <meta name="format-detection" content="telephone=no" />
-      </Head>
+      </Head >
       <div className="layout__inner">
-        <Sidebar />
+        <Sidebar toogleSidebarCallback={toogleSidebar} />
         {withHexagonBg && <HexagonBackground />}
         <div className="page">
           <NavBar />
-          <div className={`page__content ${className}`}>
-            {children}
-          </div>
+          <ScrollLock isActive={isSidebarOpen}>
+            <div className={`page__content ${className}`}>
+              {children}
+            </div>
+          </ScrollLock>
         </div>
       </div>
       <Footer />
       <CookiesBanner />
-    </div>
+    </div >
   )
 }
 
