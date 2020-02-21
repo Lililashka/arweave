@@ -39,8 +39,8 @@ $sidebar-width: 22rem;
       width: 27px;
       height: 3px;
       background-color: black;
-      -webkit-animation: effectFadein 1s;
-      animation: effectFadein 1s;
+      -webkit-animation: effectFadein $duration-normal;
+      animation: effectFadein $duration-normal;
       animation-fill-mode: forwards;
 
       +* {
@@ -52,8 +52,8 @@ $sidebar-width: 22rem;
 
       div:nth-child(1),
       div:nth-child(3) {
-        -webkit-animation: effectFadeout 0.5s;
-        animation: effectFadeout 0.5s;
+        -webkit-animation: effectFadeout $duration-short;
+        animation: effectFadeout $duration-short;
         animation-fill-mode: forwards;
       }
     }
@@ -75,8 +75,8 @@ $sidebar-width: 22rem;
 
     &.open {
       display: block;
-      -webkit-animation: effectFadein 1s;
-      animation: effectFadein 1s;
+      -webkit-animation: effectFadein $duration-normal;
+      animation: effectFadein $duration-normal;
     }
   }
 
@@ -175,8 +175,8 @@ $sidebar-width: 22rem;
 
         .close-icon {
           display: block;
-          -webkit-animation: effectFadein 1s;
-          animation: effectFadein 1s;
+          -webkit-animation: effectFadein $duration-normal;
+          animation: effectFadein $duration-normal;
         }
       }
     }
