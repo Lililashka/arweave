@@ -37,11 +37,12 @@ $sidebar-width: 22rem;
 
     div {
       width: 27px;
-      height: 3px;
+      height: 2px;
       background-color: black;
       -webkit-animation: effectFadein $duration-normal;
       animation: effectFadein $duration-normal;
       animation-fill-mode: forwards;
+      border-radius: 20px;
 
       +* {
         margin-top: 0.5rem;
