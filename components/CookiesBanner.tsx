@@ -47,7 +47,7 @@ const CookiesBanner: React.FunctionComponent = () => {
         </div>
         <div className="cookies-banner__actions">
           <button className="primary" onClick={onApprove}>ACCEPT</button>
-          <button className="secondary" onClick={onDeny}>NO COOKIES</button>
+          <button className="secondary" onClick={onDeny}>NO, THX</button>
         </div>
       </div>
     </div>
