@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Footer from './Footer'
 import NavBar from './Navbar'
@@ -22,6 +22,10 @@ const Layout: React.FunctionComponent<Props> = ({
   withHexagonBg = false
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   function toogleSidebar(isOpen: boolean) {
     setIsSidebarOpen(isOpen);
