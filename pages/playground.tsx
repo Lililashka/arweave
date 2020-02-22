@@ -77,7 +77,7 @@ const Playground: NextPage = () => {
           {!isCompling && !isDeployed && <li/>}
           {isCompling && <li>your code is deploying...</li>}
           {isCompling && <li/>}
-          {isDeployed &&<li>your code is deployed here <span className="yellow">https://arweave.net/:id</span></li>}
+          {isDeployed &&<li>your code is deployed here <a href="https://google.com">https://arweave.net/:id</a></li>}
           {isDeployed && <li><span className="comment">// wait few minutes before clicking the link</span></li>}
           <li/>
           <li/>

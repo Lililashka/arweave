@@ -1,7 +1,7 @@
 .code-playground {
   background: $color-text-black;
   color: $color-super-light-gray;
-  padding: 0px;
+  margin-bottom: $space-md;
 
   &__inner {
     padding: $space-md;
@@ -42,7 +42,7 @@
 
     }
   }
-  
+
 
   .CodeMirror {
     border: 1px solid #eee;
@@ -69,6 +69,7 @@
       p {
         margin-top: 0;
         font-size: $font-size-sm;
+        color: white;
       }
     }
   }
@@ -90,7 +91,7 @@
       color: $color-text-blue;
     }
 
-    span.yellow {
+    a {
       color: $color-text-yellow;
     }
 
