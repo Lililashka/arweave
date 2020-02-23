@@ -15,6 +15,48 @@
     padding: $space-md;
   }
 
+  .author-container {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+
+    span {
+      margin-top: 0;
+
+      &.name {
+        font-weight: bold;
+      }
+    }
+
+    img {
+      margin-top: 0;
+      margin-left: $space-sm;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+    }
+  }
+
+  h1 {
+    margin-top: $space-md;
+    position: relative;
+    padding-bottom: $space-md * 1.5;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 10rem;
+      bottom: 0;
+      left: 0;
+      border-top: 0.5rem solid black;
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin-top: $space-md * 1.5;
+  }
+
   // @include media-screen-small {
   //   max-width: 20rem;
   // }

@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <CardLinkSection aosConfig={{ "data-aos": "fade-up", "data-aos-easing": "linear", "data-aos-duration": "500" }} align="right" title="Feature Number Two"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
         action="GO TO THAT PAGE" />
-      <FullWidthSection>
+      <FullWidthSection className="no-horizontal-padding">
         <AppDiscoveryCarousel />
       </FullWidthSection>
       <NewsletterSignup />

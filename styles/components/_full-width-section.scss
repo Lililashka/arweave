@@ -23,3 +23,10 @@
 .full-width-section.images-grid-container {
   margin-top: $space-lg;
 }
+
+.full-width-section.no-horizontal-padding {
+  .full-width-section__inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
