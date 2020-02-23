@@ -1,5 +1,6 @@
 import * as React from "react"
 import Slider from "react-slick";
+import { isMobile } from "react-device-detect";
 
 type Props = {
   title: string,
@@ -41,7 +42,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    variableWidth: true
+    variableWidth: isMobile ? false : true
   };
 
   return (

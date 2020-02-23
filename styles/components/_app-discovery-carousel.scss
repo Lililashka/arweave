@@ -1,7 +1,11 @@
 .app-discovery-carousel {
   .slick-slide {
     margin-top: 0;
-    max-width: 45rem;
+    max-width: 40rem;
+
+    @media screen and (max-width: 48rem) {
+      max-width: 30rem;
+    }
   }
 }
 
@@ -9,7 +13,6 @@
   background: white;
   display: inline-block;
   margin: 0 $space-md;
-  max-width: 45rem;
 
   &__inner {
     padding: $space-md;
@@ -17,6 +20,7 @@
 
   .author-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-content: center;
 
@@ -57,11 +61,19 @@
     margin-top: $space-md * 1.5;
   }
 
-  // @include media-screen-small {
-  //   max-width: 20rem;
-  // }
+  @include media-screen-small {
+    margin: 0 $space-sm;
 
-  // @include media-screen-extra-small {
-  //   max-width: 15rem;
-  // }
+    &__inner {
+      padding: $space-sm;
+    }
+
+    .author-container {
+      display: none;
+    }
+
+    h1 {
+      font-size: $font-size-xl;
+    }
+  }
 }
