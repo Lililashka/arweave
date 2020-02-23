@@ -1,0 +1,25 @@
+.app-discovery-carousel {
+  .slick-slide {
+    margin-top: 0;
+    max-width: 45rem;
+  }
+}
+
+.app-discovery-carousel-item {
+  background: white;
+  display: inline-block;
+  margin: 0 $space-md;
+  max-width: 45rem;
+
+  &__inner {
+    padding: $space-md;
+  }
+
+  // @include media-screen-small {
+  //   max-width: 20rem;
+  // }
+
+  // @include media-screen-extra-small {
+  //   max-width: 15rem;
+  // }
+}

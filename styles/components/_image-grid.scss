@@ -1,0 +1,17 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-column-gap: $space-md;
+
+  div {
+    margin: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    padding-top: $space-sm;
+
+    object-fit: contain;
+  }
+}

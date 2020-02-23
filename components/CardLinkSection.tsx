@@ -21,7 +21,7 @@ const CardLinkSection: React.FunctionComponent<Props> = ({
     return <p key={i}>{item}</p>
   });
   return (
-    <div className="card-link-section" {...aosConfig}>
+    <section className="card-link-section" {...aosConfig}>
       <div className={`card-link-section__inner ${align}`}>
         <div className={`card-link-section__content ${align}`}>
           <h1>{title}</h1>
@@ -29,7 +29,7 @@ const CardLinkSection: React.FunctionComponent<Props> = ({
           <a className="btn" href={url}>{action}</a>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,0 +1,25 @@
+.full-width-section {
+  background: white;
+
+  width: 100vw;
+  max-width: none;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  &__inner {
+    background-color: whitesmoke;
+    padding: $space-md * 1.5;
+
+    @include media-screen-small {
+      padding: $space-md;
+    }
+  }
+
+}
+
+.full-width-section.images-grid-container {
+  margin-top: $space-lg;
+}

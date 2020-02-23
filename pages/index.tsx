@@ -4,8 +4,10 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Layout from '../components/ui/Layout'
 import CardLinkSection from '../components/CardLinkSection'
-import TitleSection from '../components/TitleSection'
+import FullWidthSection from '../components/FullWidthSection'
 import NewsletterSignup from '../components/NewsletterSignup'
+import AppDiscoveryCarousel from '../components/AppDiscoveryCarousel'
+import ImageGrid from '../components/ImageGrid'
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -23,14 +25,13 @@ const Home: NextPage = () => {
       <CardLinkSection aosConfig={{ "data-aos": "fade-up", "data-aos-easing": "linear", "data-aos-duration": "500" }} align="right" title="Feature Number Two"
         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
         action="GO TO THAT PAGE" />
+      <FullWidthSection>
+        <AppDiscoveryCarousel />
+      </FullWidthSection>
       <NewsletterSignup />
-      <TitleSection className="images-grid">
-        <div><img src="https://via.placeholder.com/200x80.png" /></div>
-        <div><img src="https://via.placeholder.com/100x80.png" /></div>
-        <div><img src="https://via.placeholder.com/100x80.png" /></div>
-        <div><img src="https://via.placeholder.com/100x80.png" /></div>
-        <div><img src="https://via.placeholder.com/100x80.png" /></div>
-      </TitleSection>
+      <FullWidthSection className="images-grid-container">
+        <ImageGrid images={["https://via.placeholder.com/200x80.png", "https://via.placeholder.com/100x80.png", "https://via.placeholder.com/100x80.png", "https://via.placeholder.com/100x80.png", "https://via.placeholder.com/100x80.png"]} />
+      </FullWidthSection>
     </Layout>
   )
 };
