@@ -1,33 +1,48 @@
 .app-discovery-carousel {
   cursor: url('/images/icons/clickdrag.svg'), n-resize;
 
-  .slick-slide {
-    margin-top: 0;
-    margin-bottom: 5rem;
-    max-width: 40rem;
+  .slick-list {
+    padding-left: 0px !important;
+  }
 
-    @media screen and (max-width: 48rem) {
-      max-width: 30rem;
+  .slick-track {
+    display: flex;
+
+    .slick-slide {
+      display: flex;
+      height: auto;
+
+      margin-top: 0;
+      margin-bottom: 5rem;
+      max-width: 40rem;
+
+      @media screen and (max-width: 48rem) {
+        max-width: 30rem;
+      }
+
+      >div {
+        height: 100%;
+      }
     }
   }
-}
-
-.slick-list {
-  padding-left: 0px !important;
 }
 
 .app-discovery-carousel-item {
   background: white;
   display: inline-block;
+  height: 100%;
   margin: 0 $space-md;
   border-radius: 5px;
   border: 1px solid $color-black;
 
   -webkit-box-shadow: 8px 0px 0px #222326;
-    -moz-box-shadow: 8px 8px 0px 0px #222326;
-    box-shadow: 8px 8px 0px 0px #222326;
+  -moz-box-shadow: 8px 8px 0px 0px #222326;
+  box-shadow: 8px 8px 0px 0px #222326;
 
   &__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: $space-md;
   }
 
@@ -69,9 +84,13 @@
     }
   }
 
+  p {
+    margin-bottom: $space-md * 1.5;
+  }
+
   a {
     display: inline-block;
-    margin-top: $space-md * 1.5;
+    margin-top: auto;
   }
 
   @include media-screen-small {
