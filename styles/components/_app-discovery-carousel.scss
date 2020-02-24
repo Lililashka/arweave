@@ -1,8 +1,9 @@
 .app-discovery-carousel {
-  cursor: url('/images/icons/carousel-cursor.png'), auto;
+  cursor: url('/images/icons/clickdrag.png'), auto;
 
   .slick-slide {
     margin-top: 0;
+    margin-bottom: 5rem;
     max-width: 40rem;
 
     @media screen and (max-width: 48rem) {
@@ -11,10 +12,20 @@
   }
 }
 
+.slick-list {
+  padding-left: 0px !important;
+}
+
 .app-discovery-carousel-item {
   background: white;
   display: inline-block;
   margin: 0 $space-md;
+  border-radius: 5px;
+  border: 1px solid $color-black;
+
+  -webkit-box-shadow: 8px 0px 0px #222326;
+    -moz-box-shadow: 8px 8px 0px 0px #222326;
+    box-shadow: 8px 8px 0px 0px #222326;
 
   &__inner {
     padding: $space-md;

@@ -4,14 +4,12 @@
   width: 100vw;
   max-width: none;
   position: relative;
-  left: 50%;
+  left: 0px;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-right: -10vw;
 
   &__inner {
-    background-color: whitesmoke;
-    padding: $space-md * 1.5;
+    padding-left: 4.998rem;
 
     @include media-screen-small {
       padding: $space-md;
