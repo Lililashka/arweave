@@ -38,7 +38,6 @@ const AppDiscoveryCarouselItem: React.FunctionComponent<Props> = ({
 const AppDiscoveryCarousel: React.FunctionComponent = () => {
   var slickSettings = {
     arrows: false,
-    centerMode: true,
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -62,6 +61,12 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
         />
         <AppDiscoveryCarouselItem
           title="Heatwave"
+          description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          url="https://google.com"
+          author={{ name: "May Doe", image: "https://via.placeholder.com/100x100.png" }}
+        />
+        <AppDiscoveryCarouselItem
+          title="Heatwave 2"
           description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           url="https://google.com"
           author={{ name: "May Doe", image: "https://via.placeholder.com/100x100.png" }}

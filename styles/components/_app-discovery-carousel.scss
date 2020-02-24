@@ -1,8 +1,11 @@
 .app-discovery-carousel {
+  overflow: visible;
+
   cursor: url('/images/icons/clickdrag.svg'), n-resize;
 
   .slick-list {
     padding-left: 0px !important;
+    overflow: visible;
   }
 
   .slick-track {
@@ -31,7 +34,7 @@
   background: white;
   display: inline-block;
   height: 100%;
-  margin: 0 $space-md;
+  margin: 0 $space-lg 0 0;
   border-radius: 5px;
   border: 1px solid $color-black;
 
@@ -94,7 +97,7 @@
   }
 
   @include media-screen-small {
-    margin: 0 $space-sm;
+    margin: 0 $space-md 0 0;
 
     &__inner {
       padding: $space-sm;
