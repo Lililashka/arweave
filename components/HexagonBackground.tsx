@@ -5,7 +5,7 @@ function getImagePaths(isMobile = false) {
   const images = []
   const totalImages = isMobile ? 100 : 150;
   for (let i = 1; i <= totalImages; i++) {
-    images.push(`/images/hexagonbg/${i}.png`)
+    images.push(`/images/hexagonbg/${i}.jpg`)
   }
   return images
 }
