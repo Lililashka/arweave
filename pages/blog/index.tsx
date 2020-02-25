@@ -1,7 +1,8 @@
-import React from "react"
+import { useState, useEffect } from "react"
 import { NextPage } from 'next'
 import moment from "moment"
 import Layout from '../../components/ui/Layout'
+import CategoryFilterInput from '../../components/blog/CategoryFilterInput'
 
 function importAll(r: any) {
   return r.keys().map(r);
@@ -17,19 +18,37 @@ function dateSortDesc(a: any, b: any) {
 }
 
 const Home: NextPage = () => {
-  const blogPreviews = previewItems.sort(dateSortDesc).map((props: any) => {
-    const { default: Component, meta } = props;
-    const { titleEn } = meta;
-    return <Component key={titleEn} />;
-  });
+  const [blogPreviews, setBlogPreviews] = useState([])
+  const allBlogPreviews = previewItems.sort(dateSortDesc)
+
+  useEffect(() => {
+    categoryFilterCallback("all")
+  }, [])
+
+  function categoryFilterCallback(filterCategory: string) {
+    const filterResult = allBlogPreviews.filter((props: any) => {
+      if (filterCategory === "all") return true
+
+      const { meta } = props
+      const { category } = meta
+      return category === filterCategory
+    })
+    setBlogPreviews(filterResult)
+  }
+
   return (
     <Layout className="blog">
       <div className="blog__header-bg" />
       <div className="blog__header">
         <h2>Blog index</h2>
+        <CategoryFilterInput callback={categoryFilterCallback} />
       </div>
       <div className="blog__post-grid">
-        {blogPreviews}
+        {blogPreviews.map((props: any, index: number) => {
+          const { default: Component, meta } = props;
+          const { titleEn } = meta;
+          return <Component key={`${titleEn}-${index}`} />;
+        })}
       </div>
     </Layout>
   )

@@ -1,0 +1,41 @@
+.my-select-input {
+  width: 12rem;
+
+  *+* {
+    margin-top: 0;
+  }
+
+  .my-select-input__control {
+    min-height: $space-md;
+
+    border: $border-width-xs black solid;
+    box-shadow: 0 6px $color-text-black;
+    border: $border-width-xs solid $color-text-black;
+    border-radius: $border-radius-sm;
+
+    &::before {
+      content: "+";
+      padding-left: $space-sm;
+    }
+
+    &.my-select-input__control--menu-is-open {
+      &::before {
+        content: "-";
+      }
+    }
+  }
+
+  .my-select-input__menu {
+    margin-top: -2px;
+    padding-top: $space-sm;
+
+    border: $border-width-xs black solid;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 6px $color-text-black;
+  }
+
+  .my-select-input__indicators {
+    display: none;
+  }
+}
