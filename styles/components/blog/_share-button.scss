@@ -1,0 +1,65 @@
+.share-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: $space-xs;
+
+  a.share-button {
+    display: inline-flex;
+    font-size: $font-size-sm;
+
+    img {
+      margin-right: $space-xs;
+    }
+
+    span {
+      margin-top: 0;
+      line-height: 1rem;
+    }
+
+    &:hover {
+      span {
+        border-bottom: 1px $color-black dashed;
+      }
+    }
+  }
+}
+
+.share-button-tooltip {
+  padding: $space-sm $space-sm 0 $space-sm !important;
+
+  &:before {
+    content: none !important;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-top: $space-xs;
+    }
+
+    li:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    display: inline-flex;
+    text-decoration: none;
+    color: $color-black;
+
+    img {
+      margin-right: $space-xs;
+    }
+
+    span {
+      margin-top: 0;
+    }
+  }
+
+  border: $border-width-xs black solid;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 6px $color-text-black;
+}

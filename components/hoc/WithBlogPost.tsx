@@ -3,6 +3,7 @@ import { NextComponentType } from "next"
 import moment from "moment"
 import Layout from "../ui/Layout"
 import BlogInfoBar from "../blog/InfoBar"
+import ShareButton from "../blog/ShareButton"
 
 type Props = {
   meta: object
@@ -32,6 +33,7 @@ export default function WithBlogPost<P extends Props>(WrappedComponent: NextComp
                 <span>written by&nbsp;</span><span className="name">{authorName}</span>
                 <img src={authorImage} />
               </div>
+              <ShareButton url="" />
             </div>
           </div>
           {children}
