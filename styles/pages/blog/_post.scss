@@ -29,5 +29,34 @@
     p {
       max-width: none;
     }
+
+  }
+}
+
+.blog-post__content-info {
+  @include layout-switcher(60rem, $space-md);
+  @include layout-switcher--sizes((60, 30));
+
+  .author-container {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    line-height: 3rem;
+
+    span {
+      margin-top: 0;
+
+      &.name {
+        font-weight: bold;
+      }
+    }
+
+    img {
+      margin-top: 0.5rem;
+      margin-left: $space-sm;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+    }
   }
 }

@@ -11,7 +11,8 @@ type Props = {
 export default function WithBlogPost<P extends Props>(WrappedComponent: NextComponentType<P>): React.ComponentType<P> {
   function WithBlogPostWrapper(props: any) {
     const { children, meta } = props;
-    const { title, category, desc, date } = meta || {};
+    const { title, category, desc, date, author } = meta || {};
+    const { name: authorName, image: authorImage } = author || {};
     const dateFormat = moment(date).format("DD MMM YYYY")
 
     return (
@@ -22,8 +23,16 @@ export default function WithBlogPost<P extends Props>(WrappedComponent: NextComp
         </div>
         <div className="blog-post__content">
           <div className="blog-post__content-info">
-            <h1>{title}</h1>
-            <BlogInfoBar category={category} publishedDate={dateFormat} />
+            <div className="blog-post__content-info__left">
+              <h1>{title}</h1>
+              <BlogInfoBar category={category} publishedDate={dateFormat} />
+            </div>
+            <div className="blog-post__content-info__right">
+              <div className="author-container">
+                <span>written by&nbsp;</span><span className="name">{authorName}</span>
+                <img src={authorImage} />
+              </div>
+            </div>
           </div>
           {children}
         </div>
