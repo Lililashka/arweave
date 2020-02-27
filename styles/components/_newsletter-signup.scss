@@ -34,10 +34,8 @@
     p.input-readonly-style {
       max-width: 35rem;
       font-size: $font-size-md;
+      font-weight: bold;
       padding: 0.3rem 0.8rem;
-
-      border: $border-width-sm solid $color-text-black;
-      border-radius: $border-radius-lg
     }
 
     @include media-screen-small {
@@ -80,7 +78,7 @@
         margin-top: 0;
 
         right: $space-sm;
-        top: $space-sm;
+        top: 0.35rem;
       }
     }
 
@@ -100,9 +98,10 @@
     }
 
     p.error {
+      font-size: $font-size-sm;
       position: absolute;
       margin: 0;
-      top: 3.8rem;
+      top: 3rem;
       text-align: left;
       color: $color-red;
     }
