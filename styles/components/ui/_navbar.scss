@@ -18,6 +18,11 @@
     right: $space-md;
     margin-top: 0;
     transition: 0.3s;
+
+    &:hover {
+      background-color: whitesmoke;
+      transition: 0.3s;
+    }
   }
 
   .nav-logo {

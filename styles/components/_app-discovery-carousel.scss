@@ -96,6 +96,16 @@
     margin-top: auto;
   }
 
+  .btn {
+    max-width: 200px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: whitesmoke;
+      transition: 0.3s;
+    }
+  }
+
   @include media-screen-small {
     margin: 0 $space-md 0 0;
 
