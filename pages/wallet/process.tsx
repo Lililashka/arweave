@@ -61,7 +61,7 @@ const WalletProcess: NextPage = () => {
       <div className="tokens__inner">
         <img src="/images/icons/error1.svg" />
         <h1>Oops!</h1>
-        <p>Looks like somethng went wrong.</p>
+        <p>Looks like something went wrong.</p>
         <div className="details">
           <p>
             Try again or email&nbsp;
