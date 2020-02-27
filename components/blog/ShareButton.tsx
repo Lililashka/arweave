@@ -1,4 +1,4 @@
-import * as React from "react"
+import { useState, useEffect } from "react"
 import ReactTooltip from 'react-tooltip'
 
 type Props = {
@@ -8,6 +8,11 @@ type Props = {
 const ShareButton: React.FunctionComponent<Props> = ({
   url = ""
 }) => {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   function shareToTwitter() {
 
@@ -26,7 +31,7 @@ const ShareButton: React.FunctionComponent<Props> = ({
       <a className="share-button" data-tip data-for='share-button-tooltip' data-event='click'>
         <img src="/images/icons/share.svg" /><span>SHARE THIS</span>
       </a>
-      <ReactTooltip id="share-button-tooltip" className="share-button-tooltip"
+      {isMounted && <ReactTooltip id="share-button-tooltip" className="share-button-tooltip"
         place="bottom" type="light" effect="solid"
         globalEventOff='click' border clickable={true}>
         <ul>
@@ -34,7 +39,7 @@ const ShareButton: React.FunctionComponent<Props> = ({
           <li><a href="#" onClick={shareToFacebook}><img src="/images/icons/share.svg" /><span>facebook</span></a></li>
           <li><a href="#" onClick={shareToEmail}><img src="/images/icons/share.svg" /><span>email</span></a></li>
         </ul>
-      </ReactTooltip>
+      </ReactTooltip>}
     </div>
   )
 }
