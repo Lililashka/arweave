@@ -28,6 +28,10 @@
 
       padding-bottom: $space-lg;
     }
+
+    .page__content.noscroll {
+      overflow: hidden;
+    }
   }
 }
 

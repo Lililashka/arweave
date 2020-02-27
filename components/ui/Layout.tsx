@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createRef } from 'react'
+import { isMobile } from "react-device-detect";
 import AOS from 'aos'
 import Head from 'next/head'
 import Footer from './Footer'
@@ -6,7 +7,7 @@ import NavBar from './Navbar'
 import Sidebar from './Sidebar'
 import CookiesBanner from '../CookiesBanner'
 import HexagonBackground from '../HexagonBackground'
-import ScrollLock from 'react-scrolllock';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 type Props = {
   title?: string,
@@ -25,25 +26,36 @@ const Layout: React.FunctionComponent<Props> = ({
   withAos = false
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+  const targetRef = createRef<HTMLDivElement>();
+  let targetElement: any = null;
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    targetElement = targetRef.current;
     if (withAos) AOS.init()
   }, [])
 
+  useEffect(() => {
+    if (isSidebarOpen) {
+      disableBodyScroll(targetElement);
+    } else {
+      enableBodyScroll(targetElement);
+    }
+
+    if (withAos) AOS.init({ disable: isSidebarOpen });
+
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, [isSidebarOpen])
+
   function toogleSidebar(isOpen: boolean) {
     setIsSidebarOpen(isOpen);
-
-    if (isOpen) {
-      AOS.init({ disable: true });
-    } else {
-      AOS.init({ disable: false })
-    }
   }
 
   return (
-    <div className="layout">
-      < Head >
+    <div className="layout" ref={targetRef}>
+      <Head>
         <link rel="icon" type="image/png" href="/favicon-183x183.png" />
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -56,11 +68,9 @@ const Layout: React.FunctionComponent<Props> = ({
         {withHexagonBg && <HexagonBackground />}
         <div className="page">
           <NavBar />
-          <ScrollLock isActive={isSidebarOpen}>
-            <div className={`page__content ${className}`}>
-              {children}
-            </div>
-          </ScrollLock>
+          <div className={`page__content ${className}`}>
+            {children}
+          </div>
         </div>
       </div>
       <Footer />
