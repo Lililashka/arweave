@@ -37,7 +37,7 @@ const NewsletterSignup: React.FunctionComponent = ({
     return (
       <div className="newsletter-signup__content">
         <h1>Thank you for subscribing to arweave’s newsletter! </h1>
-        <p className="input-readonly-style">Email: kyles@arweave.org</p>
+        <p className="input-readonly-style">The email will be sent to: <br/>kyles@arweave.org</p>
       </div>
     )
   }
