@@ -8,6 +8,7 @@ import ReactTooltip from "react-tooltip"
 
 const WalletDownload: NextPage = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [token, setToken] = useState("");
   const [validationMessage, setValidationMessage] = useState("");
   const tokenApi = new TokenApi();
@@ -49,14 +50,14 @@ const WalletDownload: NextPage = () => {
       Router.push("/wallet/complete")
     } catch (err) {
       console.log(err);
-      // Todo: handle error
+      setIsError(true);
     }
   }
 
   return (
     <Layout className="tokens download">
       <div className="tokens__inner">
-      <img src="/images/icons/key.svg" />
+        <img src="/images/icons/key.svg" />
         <h1>Download your key file</h1>
         <p>Nobody (including the arweave project) can help you recover your wallet if the key file is lost.</p>
         <p className="bold">So, remember to keep it safe!</p>
@@ -73,7 +74,10 @@ const WalletDownload: NextPage = () => {
             </ReactTooltip>
             I understand that I am responsible for my key file.
           </label>
-          <button className="primary" type="submit" >DOWNLOAD KEY</button>
+          <button className={`primary ${isError && "error"}`} disabled={isError} type="submit" >DOWNLOAD KEY</button>
+          {isError && <p className="error">
+            ! Your download link is expired. Try start over.
+          </p>}
         </form>
       </div>
     </Layout>
