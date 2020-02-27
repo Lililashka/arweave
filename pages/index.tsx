@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <AppDiscoveryCarousel />
       <NewsletterSignup />
       <FullWidthSection className="images-grid-container">
-        <ImageGrid images={["https://via.placeholder.com/200x80.png", "https://via.placeholder.com/100x80.png", "https://via.placeholder.com/100x80.png", "https://via.placeholder.com/100x80.png", "https://via.placeholder.com/100x80.png"]} />
+        <ImageGrid images={["/images/partners/pn-techstar.png", "/images/partners/pn-1kx.png", "/images/partners/pn-iwf.png"]} />
       </FullWidthSection>
     </Layout>
   )

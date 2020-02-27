@@ -29,7 +29,7 @@ const AppDiscoveryCarouselItem: React.FunctionComponent<Props> = ({
         </div>
         <h1>{title}</h1>
         <p>{description}</p>
-        <a href={url}>Check out an app</a>
+        <a className="btn" href={url}>Check out</a>
       </div>
     </div>
   )
