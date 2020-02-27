@@ -31,6 +31,10 @@
     content: none !important;
   }
 
+  &:after {
+    content: none !important;
+  }
+
   ul {
     list-style: none;
     padding: 0;

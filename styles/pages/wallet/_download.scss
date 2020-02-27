@@ -1,9 +1,25 @@
 .tokens.download {
   h1 {
     font-size: $font-size-xxl;
+    margin-top: $space-sm;
   }
 
   p.bold {
     font-weight: bold;
+  }
+
+  p.error {
+    margin-top: $space-sm;
+    color: $color-red;
+    font-size: $font-size-sm;
+  }
+
+  button {
+    min-width: 20rem;
+    margin-bottom: 0 !important;
+  }
+
+  button.error {
+    border: 2px solid $color-red;
   }
 }
