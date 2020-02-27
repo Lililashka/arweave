@@ -64,7 +64,7 @@ const WalletProcess: NextPage = () => {
         <p>Looks like somethng went wrong.</p>
         <div className="details">
           <p>
-            Try again or email
+            Try again or email&nbsp;
             <a href="mailto:team@arweave.org">support</a> if this continues.
           </p>
         </div>
