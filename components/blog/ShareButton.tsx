@@ -23,7 +23,7 @@ const ShareButton: React.FunctionComponent<Props> = ({
 
   return (
     <div className="share-button-container">
-      <a className="share-button" data-tip data-for='share-button-tooltip' data-event='click focus'>
+      <a className="share-button" data-tip data-for='share-button-tooltip' data-event='click'>
         <img src="/images/icons/share.svg" /><span>SHARE THIS</span>
       </a>
       <ReactTooltip id="share-button-tooltip" className="share-button-tooltip"
