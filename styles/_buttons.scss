@@ -9,9 +9,11 @@ button {
 
   font-size: $font-size-md;
   font-weight: 400;
+  transition: 0.3s;
 
   &:hover {
     background-color: $color-light-button-hover;
+    transition: 0.3s;
   }
 
   &:active {
@@ -25,8 +27,10 @@ button.primary {
   background: $color-darker-button;
   color: white;
   font-family: $font-family-mono;
+  transition: 0.3s;
 
   &:hover {
     background: $color-darker-button-hover;
+    transition: 0.3s;
   }
 }

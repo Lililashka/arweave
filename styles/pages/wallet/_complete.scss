@@ -17,3 +17,12 @@
     }
   }
 }
+
+.btn {
+  transition: 0.3s;
+  text-transform: uppercase;
+
+  &:hover {
+    transition: 0.3s;
+  }
+}
