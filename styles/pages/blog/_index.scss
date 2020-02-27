@@ -15,10 +15,15 @@
     z-index: -1;
     background-color: $color-white-smoke;
     border-bottom: $color-black 1px dashed;
+
+    @include media-screen-small {
+      height: 10rem;
+    }
   }
 
   &__header {
     display: flex;
+    flex-direction: row;
 
     h2 {
       font-weight: bold;
@@ -26,6 +31,14 @@
 
     .my-select-input {
       margin: auto 0 auto $space-lg;
+    }
+
+    @include media-screen-small {
+      flex-direction: column;
+
+      .my-select-input {
+        margin: $space-md 0;
+      }
     }
   }
 
