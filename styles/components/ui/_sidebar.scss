@@ -76,8 +76,8 @@ $sidebar-width: 22rem;
 
     &.open {
       display: block;
-      -webkit-animation: effectFadein $duration-normal;
-      animation: effectFadein $duration-normal;
+      -webkit-animation: effectFadein $duration-normal*2;
+      animation: effectFadein $duration-normal*2;
     }
   }
 

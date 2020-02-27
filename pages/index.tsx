@@ -1,6 +1,4 @@
-import { useEffect } from 'react'
 import { NextPage } from 'next'
-import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Layout from '../components/ui/Layout'
 import CardLinkSection from '../components/CardLinkSection'
@@ -10,12 +8,8 @@ import AppDiscoveryCarousel from '../components/AppDiscoveryCarousel'
 import ImageGrid from '../components/ImageGrid'
 
 const Home: NextPage = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
-    <Layout withHexagonBg>
+    <Layout withAos withHexagonBg>
       <CardLinkSection aosConfig={{ "data-aos": "fade-up", "data-aos-easing": "linear", "data-aos-duration": "500" }} title="Store data, permanently"
         desc="Arweave enables you to permanently host  your web apps and pages, simply and quickly."
         action="SEE DOCUMENTATION" />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import AOS from 'aos'
 import Head from 'next/head'
 import Footer from './Footer'
 import NavBar from './Navbar'
@@ -11,7 +12,8 @@ type Props = {
   title?: string,
   desc?: string,
   className?: string,
-  withHexagonBg?: Boolean
+  withHexagonBg?: Boolean,
+  withAos?: Boolean
 }
 
 const Layout: React.FunctionComponent<Props> = ({
@@ -19,16 +21,24 @@ const Layout: React.FunctionComponent<Props> = ({
   title = 'arweave',
   desc = 'arweave is a global, permanent hard drive built on two novel technologies: the blockweave, a derivative of the blockchain, and proof of access, a custom incentivised proof of work algorithm. These innovations provide truly permanent data storage for the very first time and at a massive scale.',
   className = "",
-  withHexagonBg = false
+  withHexagonBg = false,
+  withAos = false
 }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    if (withAos) AOS.init()
   }, [])
 
   function toogleSidebar(isOpen: boolean) {
     setIsSidebarOpen(isOpen);
+
+    if (isOpen) {
+      AOS.init({ disable: true });
+    } else {
+      AOS.init({ disable: false })
+    }
   }
 
   return (

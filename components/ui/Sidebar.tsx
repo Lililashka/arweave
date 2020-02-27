@@ -1,5 +1,6 @@
 import { useState } from "react"
 import SidebarMenu from "./SidebarMenu"
+import OutsideClickHandler from 'react-outside-click-handler';
 
 type Props = {
   toogleSidebarCallback(isOpen: boolean): void,
@@ -31,18 +32,27 @@ const Sidebar: React.FunctionComponent<Props> = ({
       </nav>
       <div className={`sidebar__content-clone ${isOpen ? "open" : "closed"}`} />
       <div className={`sidebar__overlay ${isOpen ? "open" : "closed"}`} />
-      <div className={`sidebar__content ${isOpen ? "open" : "closed"}`}>
-        <div className="close-icon">
-          <div className="close-icon__inner" onClick={onCloseClick}>
-            <img src="/images/icons/close.svg" />
-            <span>{" "}close</span>
+
+      <OutsideClickHandler
+        onOutsideClick={() => {
+          setTimeout(() => {
+            if (isOpen) onCloseClick()
+          }, 100)
+        }}
+      >
+        <div className={`sidebar__content ${isOpen ? "open" : "closed"}`}>
+          <div className="close-icon">
+            <div className="close-icon__inner" onClick={onCloseClick}>
+              <img src="/images/icons/close.svg" />
+              <span>{" "}close</span>
+            </div>
+          </div>
+          <div className='sidebar__content__inner'>
+            <SidebarMenu />
           </div>
         </div>
-        <div className='sidebar__content__inner'>
-          <SidebarMenu />
-        </div>
-      </div>
-    </div>
+      </OutsideClickHandler>
+    </div >
   )
 }
 
