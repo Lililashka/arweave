@@ -13,7 +13,7 @@ const CardLinkSection: React.FunctionComponent<Props> = ({
   align = "center",
   title = "",
   desc = "",
-  action = "see document",
+  action = undefined,
   url = "#",
   aosConfig = {}
 }) => {
@@ -26,7 +26,7 @@ const CardLinkSection: React.FunctionComponent<Props> = ({
         <div className={`card-link-section__content ${align}`}>
           <h1>{title}</h1>
           {formatDesc}
-          <a className="btn" href={url}>{action}</a>
+          {action && <a className="btn" href={url}>{action}</a>}
         </div>
       </div>
     </section>
