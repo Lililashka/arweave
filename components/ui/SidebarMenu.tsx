@@ -1,151 +1,99 @@
 import *  as React from "react"
 import SidebarMenuSection from "./SidebarMenuSection"
 
-const developmentTreeData = [
+const learnTreeData = [
   {
-    key: 'mine',
-    label: 'mine',
-    nodes: [
-      {
-        key: 'mine-welcome',
-        label: 'welcome to arweave',
-        nodes: [],
-        url: '/mine/welcome'
-      }, {
-        key: 'mine-about-us',
-        label: 'about us',
-        nodes: [],
-        url: '/mine/about'
-      },
-      {
-        key: 'mine-Home',
-        label: 'homepage',
-        nodes: [],
-        url: '/'
-      }
-    ],
+    key: 'intro',
+    label: 'What is Arweave?',
+    nodes: [],
+    url: '/'
   },
   {
-    key: 'archive',
-    label: 'archive',
+    key: 'technology',
+    label: 'Technology',
     nodes: [
       {
-        key: 'archive-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
-  },
-  {
-    key: 'deploy',
-    label: 'deploy',
-    nodes: [
-      {
-        key: 'deploy-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
-  }
-];
-
-const technologyTreeData = [
-  {
-    key: 'wallet',
-    label: 'wallet',
-    nodes: [
-      {
-        key: 'wallet-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }, {
-        key: 'wallet-sub2',
-        label: 'sub header 2',
+        key: 'storage-endowment',
+        label: 'Storage Endowment',
         nodes: [],
         url: 'https://google.com'
       },
       {
-        key: 'wallet-sub3',
-        label: 'sub header 3',
+        key: 'permaweb',
+        label: 'Permaweb',
+        nodes: [],
+        url: 'https://google.com'
+      },
+      {
+        key: 'content-moderation',
+        label: 'Content Moderation',
+        nodes: [],
+        url: 'https://google.com'
+      },
+      {
+        key: 'papers',
+        label: 'Papers',
         nodes: [],
         url: 'https://google.com'
       }
-    ],
-  },
-  {
-    key: 'playground',
-    label: 'playground',
-    isNew: true,
-    url: '/playground'
+    ]
   }
 ];
 
-const communityTreeData = [
+const getInvolvedTreeData = [
   {
-    key: 'showcase',
-    label: 'showcase',
-    class: 'primary',
-    nodes: [
-      {
-        key: 'showcase-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }, {
-        key: 'showcase-sub2',
-        label: 'sub header 2',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    key: 'community',
+    label: 'Community',
+    nodes: [],
+    url: '/get-involved/community'
   },
   {
-    key: 'hackathon',
-    label: 'hackathon',
-    nodes: [
-      {
-        key: 'hackathon-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
-  },
-  {
-    key: 'blog',
-    label: 'blog',
-    isNew: true,
-    url: '/blog'
+    key: 'grants-and-investments',
+    label: 'Grants and investments',
+    nodes: [],
+    url: '/get-involved/grants-funding'
   }
 ];
 
-const faqTreeData = [
+const buildTreeData = [
   {
-    key: 'permaweb',
-    label: 'what is permaweb?',
-    nodes: [
-      {
-        key: 'permaweb-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    key: 'start',
+    label: 'Start',
+    nodes: [],
+    url: '/build'
   },
   {
-    key: 'ourtech',
-    label: 'our technology',
-    nodes: [
-      {
-        key: 'hackathon-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    key: 'interfaces',
+    label: 'Interfaces',
+    nodes: [],
+    url: '/build#interfaces'
+  },
+  {
+    key: 'resources',
+    label: 'Resources',
+    nodes: [],
+    url: '/build#resources'
+  }
+];
+
+const mineTreeData = [
+  {
+    key: 'start',
+    label: 'Start',
+    nodes: [],
+    url: '/mine/start'
+  },
+  {
+    key: 'optimise',
+    label: 'Optimise',
+    nodes: [],
+    url: '/mine/optimise'
+  },
+  {
+    key: 'learn-more',
+    label: 'Learn more',
+    nodes: [],
+    url: '/mine/learn-more'
   }
 ];
 
@@ -153,10 +101,10 @@ const SidebarMenu: React.FunctionComponent = () => {
 
   return (
     <div className="sidebar-menu">
-      <SidebarMenuSection name="Development" treeData={developmentTreeData} />
-      <SidebarMenuSection name="Technology" treeData={technologyTreeData} />
-      <SidebarMenuSection name="Community" treeData={communityTreeData} />
-      <SidebarMenuSection name="Faq" treeData={faqTreeData} />
+      <SidebarMenuSection name="Learn" treeData={learnTreeData} />
+      <SidebarMenuSection name="Get Involved" treeData={getInvolvedTreeData} />
+      <SidebarMenuSection name="Build" treeData={buildTreeData} />
+      <SidebarMenuSection name="Mine" treeData={mineTreeData} />
     </div>
   )
 }
