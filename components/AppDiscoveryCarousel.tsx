@@ -56,7 +56,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
   }, [])
 
   return (
-    <div className="app-discovery-carousel">
+    <section className="app-discovery-carousel">
       <Slider {...slickSettings}>
         <AppDiscoveryCarouselItem
           title="Arweave web archive"
@@ -94,7 +94,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
           actionText="Check Them Out [-> Arweave Apps]"
         />
       </Slider>
-    </div >
+    </section >
   )
 }
 

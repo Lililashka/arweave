@@ -37,13 +37,13 @@ const NewsletterSignup: React.FunctionComponent = ({
     return (
       <div className="newsletter-signup__content">
         <h1>Thank you for subscribing to arweave’s newsletter! </h1>
-        <p className="input-readonly-style">The email will be sent to: <br/>kyles@arweave.org</p>
+        <p className="input-readonly-style">The email will be sent to: <br />kyles@arweave.org</p>
       </div>
     )
   }
 
   return (
-    <div className="newsletter-signup">
+    <section className="newsletter-signup">
       <div className="newsletter-signup__inner">
         {isSucess ? renderThankyou() : (
           <div className="newsletter-signup__content">
@@ -60,7 +60,7 @@ const NewsletterSignup: React.FunctionComponent = ({
           </div>
         )}
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -14,6 +14,11 @@
       width: 100%;
       max-height: 100%;
       margin-top: $navbar-height;
+      padding: 0 $space-lg;
+
+      @include media-screen-small {
+        padding: 0 $space-md;
+      }
     }
 
     .page__content {
@@ -23,10 +28,9 @@
       margin-right: auto;
 
       padding-bottom: $space-lg;
-      padding: 0 $space-lg;
 
       @include media-screen-small {
-        padding: 0 $space-md;
+        padding-bottom: $space-md;
       }
     }
 

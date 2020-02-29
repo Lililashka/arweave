@@ -9,7 +9,7 @@ import ImageGrid from '../components/ImageGrid'
 
 const Home: NextPage = () => {
   return (
-    <Layout withAos withHexagonBg>
+    <Layout withAos withHexagonBg className="homepage">
       <CardLinkSection aosConfig={{ "data-aos": "fade-up", "data-aos-easing": "linear", "data-aos-duration": "500" }} 
         title="Store data, permanently"
         desc="Arweave enables you to store documents and applications forever."

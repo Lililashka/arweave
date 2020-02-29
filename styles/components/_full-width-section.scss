@@ -21,7 +21,12 @@
 }
 
 .full-width-section.images-grid-container {
+  padding: 0;
   margin-top: $space-lg;
+
+  @include media-screen-small {
+    margin-top: $space-lg;
+  }
 }
 
 .full-width-section.no-horizontal-padding {

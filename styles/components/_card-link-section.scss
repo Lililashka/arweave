@@ -1,10 +1,4 @@
 .card-link-section {
-  padding: $space-lg 0;
-
-  @include media-screen-small {
-    padding: $space-xs 0;
-  }
-
   h1 {
     font-size: $font-size-xxxl;
     line-height: $font-size-xxxl * 1.5;
