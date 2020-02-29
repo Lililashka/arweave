@@ -66,8 +66,8 @@ const Layout: React.FunctionComponent<Props> = ({
       <div className="layout__inner">
         <Sidebar toogleSidebarCallback={toogleSidebar} />
         {withHexagonBg && <HexagonBackground />}
+        <NavBar />
         <div className="page">
-          <NavBar />
           <div className={`page__content ${className}`}>
             {children}
           </div>
