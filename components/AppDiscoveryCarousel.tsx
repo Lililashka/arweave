@@ -48,28 +48,42 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
     <div className="app-discovery-carousel">
       <Slider {...slickSettings}>
         <AppDiscoveryCarouselItem
-          title="2020 Permaweb Highlights"
-          description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          url="https://google.com"
+          title="Arweave web archive"
+          description="30% of web links break within two years. The traditional web is failing you. 
+
+          Archive your favourite sites and sources, ensuring they exist forever."
+          url="https://chrome.google.com/webstore/detail/arweave/iplppiggblloelhoglpmkmbinggcaaoc"
           author={{ name: "Jane Doe", image: "https://via.placeholder.com/100x100.png" }}
         />
         <AppDiscoveryCarouselItem
-          title="Feedwave"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          title="Feedweave"
+          description="A decentralised, trustless blogging platform that knows who should own your data. 
+
+          Spoiler: It is you."
           url="https://google.com"
-          author={{ name: "June Doe", image: "https://via.placeholder.com/100x100.png" }}
+          author={{ name: "@literature", image: "https://via.placeholder.com/100x100.png" }}
         />
         <AppDiscoveryCarouselItem
-          title="Heatwave"
-          description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          title="Weavemail"
+          description="Big-tech has taken control of email. We no longer have ownership of our own identities. 
+
+          Weavemail is a mail network that with integrity. It will never sell your data, show adverts, or violate your privacy."
           url="https://google.com"
           author={{ name: "May Doe", image: "https://via.placeholder.com/100x100.png" }}
         />
         <AppDiscoveryCarouselItem
-          title="Heatwave 2"
-          description="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          title="Ownerless communities"
+          description="Content moderation policies frequently rip online communities apart, or allow trolls to run rampant. 
+
+          Permaweb apps solve these problems by being ownerless. Their moderation is transparent and described in openly accessible code, enabling a new breed of decentralised online communities."
           url="https://google.com"
-          author={{ name: "May Doe", image: "https://via.placeholder.com/100x100.png" }}
+          author={{ name: "@aokisok", image: "https://via.placeholder.com/100x100.png" }}
+        />
+        <AppDiscoveryCarouselItem
+          title="Explore the permaweb"
+          description="The permaweb already hosts hundreds of immutable and decentralised apps. Explore a selection of them here."
+          url="https://google.com"
+          author={{ name: "@cedriking", image: "https://via.placeholder.com/100x100.png" }}
         />
       </Slider>
     </div >
