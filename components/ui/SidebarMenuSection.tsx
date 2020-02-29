@@ -5,6 +5,7 @@ import Router from 'next/router'
 type Props = {
   name: string,
   treeData: TreeNodeInArray[],
+  closeSideBar(): void,
 }
 
 function getPath(): string | undefined {
@@ -30,14 +31,16 @@ function findActiveKey(path: string | undefined, nodes: TreeNodeInArray[] | unde
   return undefined
 }
 
-function checkAbsoluteUrl(urlStr: string) {
-  const pat = /^https?:\/\//i;
-  return pat.test(urlStr);
+function isSameLocationWithHashtag(url: string, currentLocation: string) {
+  if (!url.includes("#")) return false;
+  var urlNoHashTag = url.replace(/#[\w-]+/, '')
+  return currentLocation.includes(urlNoHashTag);
 }
 
 const SidebarMenuSection: React.FunctionComponent<Props> = ({
   name = "Menu Section",
-  treeData = []
+  treeData = [],
+  closeSideBar
 }) => {
   const [isReady, setIsReady] = React.useState()
 
@@ -49,6 +52,7 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
 
   const routePath = getPath()
   const activeKey = findActiveKey(routePath, treeData)
+
   const openNodes = activeKey ? [activeKey.substring(0, activeKey.lastIndexOf("/")), activeKey] : []
 
   return (
@@ -62,8 +66,11 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
           disableKeyboard={false}
           onClickItem={({ url }) => {
             if (!url) return
-            if (checkAbsoluteUrl(url)) window.location.href = url;
-            else Router.push(url);
+            if (isSameLocationWithHashtag(url, window.location.href)) {
+              closeSideBar();
+              window.location.href = url;
+            }
+            else window.location.href = url;
           }} >
           {({ items }) => (
             <ul className="rstm-tree-item-group">

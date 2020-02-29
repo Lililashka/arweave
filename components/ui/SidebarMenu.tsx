@@ -97,14 +97,20 @@ const mineTreeData = [
   }
 ];
 
-const SidebarMenu: React.FunctionComponent = () => {
+type Props = {
+  closeSideBar(): void,
+}
+
+const SidebarMenu: React.FunctionComponent<Props> = ({
+  closeSideBar
+}) => {
 
   return (
     <div className="sidebar-menu">
-      <SidebarMenuSection name="Learn" treeData={learnTreeData} />
-      <SidebarMenuSection name="Get Involved" treeData={getInvolvedTreeData} />
-      <SidebarMenuSection name="Build" treeData={buildTreeData} />
-      <SidebarMenuSection name="Mine" treeData={mineTreeData} />
+      <SidebarMenuSection name="Learn" treeData={learnTreeData} closeSideBar={closeSideBar} />
+      <SidebarMenuSection name="Get Involved" treeData={getInvolvedTreeData} closeSideBar={closeSideBar} />
+      <SidebarMenuSection name="Build" treeData={buildTreeData} closeSideBar={closeSideBar} />
+      <SidebarMenuSection name="Mine" treeData={mineTreeData} closeSideBar={closeSideBar} />
     </div>
   )
 }

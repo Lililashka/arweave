@@ -48,7 +48,7 @@ const Sidebar: React.FunctionComponent<Props> = ({
             </div>
           </div>
           <div className='sidebar__content__inner'>
-            <SidebarMenu />
+            <SidebarMenu closeSideBar={onCloseClick} />
           </div>
         </div>
       </OutsideClickHandler>
