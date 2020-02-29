@@ -51,6 +51,8 @@
   form {
     display: flex;
     margin-top: 0;
+    margin-left: $space-lg;
+    margin-right: $space-lg;
 
     position: relative;
 
@@ -107,8 +109,15 @@
       color: $color-red;
     }
 
+    @include media-screen-medium {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
     @include media-screen-small {
       display: block;
+      margin-left: 0px;
+      margin-right: 0px;
 
       .input-container {
         border-radius: $border-radius-lg;
