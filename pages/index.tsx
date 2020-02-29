@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       <AppDiscoveryCarousel />
       <NewsletterSignup />
       <FullWidthSection className="images-grid-container">
-        <ImageGrid images={["/images/partners/pn-techstar.png", "/images/partners/pn-1kx.png", "/images/partners/pn-iwf.png"]} />
+        <ImageGrid images={["/images/partners/pn-techstar.png", "/images/partners/pn-techstar.png", "/images/partners/pn-techstar.png", "/images/partners/pn-techstar.png", "/images/partners/pn-1kx.png", "/images/partners/pn-iwf.png"]} />
       </FullWidthSection>
     </Layout>
   )
