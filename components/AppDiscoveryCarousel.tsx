@@ -1,6 +1,6 @@
-import * as React from "react"
+import { useState, useEffect } from "react"
 import Slider from "react-slick";
-import { isMobile } from "react-device-detect";
+import { isMobile, isFirefox } from "react-device-detect";
 
 type Props = {
   title: string,
@@ -49,6 +49,11 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
     slidesToScroll: 1,
     variableWidth: isMobile ? false : true
   };
+  const [webArchiveUrl, setWebArchiveUrl] = useState("https://chrome.google.com/webstore/detail/arweave/iplppiggblloelhoglpmkmbinggcaaoc")
+
+  useEffect(() => {
+    if (isFirefox) setWebArchiveUrl("https://addons.mozilla.org/en-US/firefox/addon/arweave/");
+  }, [])
 
   return (
     <div className="app-discovery-carousel">
@@ -56,7 +61,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
         <AppDiscoveryCarouselItem
           title="Arweave web archive"
           description="30% of web links break within two years. The traditional web is failing you.  Archive your favourite sites and sources, ensuring they exist forever."
-          url="https://chrome.google.com/webstore/detail/arweave/iplppiggblloelhoglpmkmbinggcaaoc"
+          url={webArchiveUrl}
           author={{ name: "Jane Doe", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Archive Now"
         />
