@@ -1,151 +1,92 @@
 import *  as React from "react"
 import SidebarMenuSection from "./SidebarMenuSection"
 
-const developmentTreeData = [
+const learnTreeData = [
   {
-    key: 'mine',
-    label: 'mine',
-    nodes: [
-      {
-        key: 'mine-welcome',
-        label: 'welcome to arweave',
-        nodes: [],
-        url: '/mine/welcome'
-      }, {
-        key: 'mine-about-us',
-        label: 'about us',
-        nodes: [],
-        url: '/mine/about'
-      },
-      {
-        key: 'mine-Home',
-        label: 'homepage',
-        nodes: [],
-        url: '/'
-      }
-    ],
+    key: 'learn',
+    label: 'What is Arweave?',
+    nodes: []  
   },
   {
-    key: 'archive',
-    label: 'archive',
+    key: 'learn',
+    label: 'Technology',
     nodes: [
       {
-        key: 'archive-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
-  },
-  {
-    key: 'deploy',
-    label: 'deploy',
-    nodes: [
-      {
-        key: 'deploy-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
-  }
-];
-
-const technologyTreeData = [
-  {
-    key: 'wallet',
-    label: 'wallet',
-    nodes: [
-      {
-        key: 'wallet-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }, {
-        key: 'wallet-sub2',
-        label: 'sub header 2',
+        key: 'learn-tech-sub1',
+        label: 'Storage Endowment',
         nodes: [],
         url: 'https://google.com'
       },
       {
-        key: 'wallet-sub3',
-        label: 'sub header 3',
+        key: 'learn-tech-sub2',
+        label: 'Permaweb',
         nodes: [],
         url: 'https://google.com'
-      }
-    ],
+      },
+      {
+        key: 'learn-tech-sub3',
+        label: 'Content Moderation',
+        nodes: [],
+        url: 'https://google.com'
+      },
+      {
+        key: 'learn-tech-sub4',
+        label: 'Papers',
+        nodes: [],
+        url: 'https://google.com'
+      },
+    ]
+  },
+];
+
+const getInvolvedTreeData = [
+  {
+    key: 'getInvolved',
+    label: 'Community',
+    nodes: []
   },
   {
-    key: 'playground',
-    label: 'playground',
-    isNew: true,
-    url: '/playground'
+    key: 'getInvolved',
+    label: 'Grants and investments',
+    nodes: []
   }
 ];
 
-const communityTreeData = [
+const buildTreeData = [
   {
-    key: 'showcase',
-    label: 'showcase',
+    key: 'build',
+    label: 'Start',
     class: 'primary',
-    nodes: [
-      {
-        key: 'showcase-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }, {
-        key: 'showcase-sub2',
-        label: 'sub header 2',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    nodes: []
   },
   {
-    key: 'hackathon',
-    label: 'hackathon',
-    nodes: [
-      {
-        key: 'hackathon-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    key: 'build',
+    label: 'Interfaces',
+    nodes: []
   },
   {
-    key: 'blog',
-    label: 'blog',
+    key: 'build',
+    label: 'Resources',
     isNew: true,
     url: '/blog'
   }
 ];
 
-const faqTreeData = [
+const mineTreeData = [
   {
-    key: 'permaweb',
-    label: 'what is permaweb?',
-    nodes: [
-      {
-        key: 'permaweb-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    key: 'mine',
+    label: 'Start',
+    nodes: []
   },
   {
-    key: 'ourtech',
-    label: 'our technology',
-    nodes: [
-      {
-        key: 'hackathon-sub1',
-        label: 'sub header 1',
-        nodes: [],
-        url: 'https://google.com'
-      }
-    ]
+    key: 'mine',
+    label: 'Optimise',
+    nodes: []
+  },
+  {
+    key: 'mine',
+    label: 'Learn more',
+    nodes: []
   }
 ];
 
@@ -153,10 +94,10 @@ const SidebarMenu: React.FunctionComponent = () => {
 
   return (
     <div className="sidebar-menu">
-      <SidebarMenuSection name="Development" treeData={developmentTreeData} />
-      <SidebarMenuSection name="Technology" treeData={technologyTreeData} />
-      <SidebarMenuSection name="Community" treeData={communityTreeData} />
-      <SidebarMenuSection name="Faq" treeData={faqTreeData} />
+      <SidebarMenuSection name="Learn" treeData={learnTreeData} />
+      <SidebarMenuSection name="Get Involved" treeData={getInvolvedTreeData} />
+      <SidebarMenuSection name="Build" treeData={buildTreeData} />
+      <SidebarMenuSection name="Mine" treeData={mineTreeData} />
     </div>
   )
 }
