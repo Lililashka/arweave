@@ -16,25 +16,25 @@ const learnTreeData = [
         key: 'storage-endowment',
         label: 'Storage Endowment',
         nodes: [],
-        url: 'https://google.com'
+        url: '/technology'
       },
       {
         key: 'permaweb',
         label: 'Permaweb',
         nodes: [],
-        url: 'https://google.com'
+        url: '/technology#permaweb'
       },
       {
         key: 'content-moderation',
         label: 'Content Moderation',
         nodes: [],
-        url: 'https://google.com'
+        url: '/technology#content-moderation'
       },
       {
         key: 'papers',
         label: 'Papers',
         nodes: [],
-        url: 'https://google.com'
+        url: '/technology#papers'
       }
     ]
   }
