@@ -87,17 +87,15 @@
     }
   }
 
-  p {
-    margin-bottom: $space-md * 1.5;
-  }
-
-  a {
+  p.action-container {
     display: inline-block;
     margin-top: auto;
+    padding-top: $space-md;
   }
 
-  .btn {
-    max-width: 200px;
+  a.btn {
+    display: inline-block;
+    min-width: 200px;
     transition: 0.3s;
 
     &:hover {
