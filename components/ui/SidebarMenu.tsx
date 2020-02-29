@@ -3,90 +3,97 @@ import SidebarMenuSection from "./SidebarMenuSection"
 
 const learnTreeData = [
   {
-    key: 'learn',
+    key: 'intro',
     label: 'What is Arweave?',
-    nodes: []  
+    nodes: [],
+    url: '/'
   },
   {
-    key: 'learn',
+    key: 'technology',
     label: 'Technology',
     nodes: [
       {
-        key: 'learn-tech-sub1',
+        key: 'storage-endowment',
         label: 'Storage Endowment',
         nodes: [],
         url: 'https://google.com'
       },
       {
-        key: 'learn-tech-sub2',
+        key: 'permaweb',
         label: 'Permaweb',
         nodes: [],
         url: 'https://google.com'
       },
       {
-        key: 'learn-tech-sub3',
+        key: 'content-moderation',
         label: 'Content Moderation',
         nodes: [],
         url: 'https://google.com'
       },
       {
-        key: 'learn-tech-sub4',
+        key: 'papers',
         label: 'Papers',
         nodes: [],
         url: 'https://google.com'
-      },
+      }
     ]
-  },
+  }
 ];
 
 const getInvolvedTreeData = [
   {
-    key: 'getInvolved',
+    key: 'community',
     label: 'Community',
-    nodes: []
+    nodes: [],
+    url: '/get-involved/community'
   },
   {
-    key: 'getInvolved',
+    key: 'grants-and-investments',
     label: 'Grants and investments',
-    nodes: []
+    nodes: [],
+    url: '/get-involved/grants-funding'
   }
 ];
 
 const buildTreeData = [
   {
-    key: 'build',
+    key: 'start',
     label: 'Start',
-    class: 'primary',
-    nodes: []
+    nodes: [],
+    url: '/build'
   },
   {
-    key: 'build',
+    key: 'interfaces',
     label: 'Interfaces',
-    nodes: []
+    nodes: [],
+    url: '/build#interfaces'
   },
   {
-    key: 'build',
+    key: 'resources',
     label: 'Resources',
-    isNew: true,
-    url: '/blog'
+    nodes: [],
+    url: '/build#resources'
   }
 ];
 
 const mineTreeData = [
   {
-    key: 'mine',
+    key: 'start',
     label: 'Start',
-    nodes: []
+    nodes: [],
+    url: '/mine/start'
   },
   {
-    key: 'mine',
+    key: 'optimise',
     label: 'Optimise',
-    nodes: []
+    nodes: [],
+    url: '/mine/optimise'
   },
   {
-    key: 'mine',
+    key: 'learn-more',
     label: 'Learn more',
-    nodes: []
+    nodes: [],
+    url: '/mine/learn-more'
   }
 ];
 
