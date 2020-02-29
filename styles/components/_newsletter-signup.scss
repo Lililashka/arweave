@@ -2,7 +2,7 @@
   text-align: center;
 
   &__inner {
-    padding: $space-lg;
+    padding: $space-md;
 
     background: white;
 
@@ -14,13 +14,14 @@
     border-radius: 5px;
 
     @include media-screen-small {
-      padding: $space-md;
+      padding: $space-sm;
     }
   }
 
   &__content {
     max-width: 50rem;
     margin: 0 auto;
+    padding: $space-sm;
 
     h1 {
       font-size: $font-size-xxl;
@@ -28,7 +29,7 @@
     }
 
     p {
-      margin: $space-lg auto;
+      margin: $space-sm auto;
     }
 
     p.input-readonly-style {
@@ -50,6 +51,8 @@
   form {
     display: flex;
     margin-top: 0;
+    margin-left: $space-lg;
+    margin-right: $space-lg;
 
     position: relative;
 
@@ -106,8 +109,15 @@
       color: $color-red;
     }
 
+    @include media-screen-medium {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
     @include media-screen-small {
       display: block;
+      margin-left: 0px;
+      margin-right: 0px;
 
       .input-container {
         border-radius: $border-radius-lg;
