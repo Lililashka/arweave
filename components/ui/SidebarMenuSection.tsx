@@ -1,6 +1,5 @@
 import * as React from "react"
 import TreeMenu, { TreeNodeInArray, ItemComponent } from 'react-simple-tree-menu';
-import Router from 'next/router'
 
 type Props = {
   name: string,
@@ -10,7 +9,8 @@ type Props = {
 
 function getPath(): string | undefined {
   if (typeof window === 'undefined') return undefined
-  return window.location.pathname
+  const { pathname, hash } = window.location;
+  return pathname + hash
 }
 
 function findActiveKey(path: string | undefined, nodes: TreeNodeInArray[] | undefined): string | undefined {
@@ -52,7 +52,6 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
 
   const routePath = getPath()
   const activeKey = findActiveKey(routePath, treeData)
-
   const openNodes = activeKey ? [activeKey.substring(0, activeKey.lastIndexOf("/")), activeKey] : []
 
   return (
