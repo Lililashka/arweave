@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   grid-column-gap: $space-md;
+  text-align: center;
 
   div {
     margin: auto;
