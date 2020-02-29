@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         desc="Arweave enables you to store documents and applications forever."
         url="/#arweave-intro"
         action="LEARN MORE" />
-      <a className="anchor-link" id="arweave-intro"/>
+      <a className="anchor" id="arweave-intro"/>
       <CardLinkSection aosConfig={{ "data-aos": "fade-up", "data-aos-easing": "linear", "data-aos-duration": "500" }} 
         align="left" 
         title="Arweave makes information permanence sustainable."
