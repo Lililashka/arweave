@@ -1,5 +1,6 @@
 .newsletter-signup {
   text-align: center;
+  padding-bottom: $space-md !important;
 
   &__inner {
     padding: $space-md;
@@ -19,14 +20,13 @@
   }
 
   &__content {
-    max-width: 50rem;
+    max-width: 45rem;
     margin: 0 auto;
     padding: $space-sm;
 
-    h1 {
-      font-size: $font-size-xxl;
-      line-height: $font-size-xxl * 1.2;
-      
+    h2 {
+      font-weight: bolder;
+
       @include media-screen-extra-small {
         font-size: $font-size-xl;
         line-height: $font-size-xl * 1.5;
@@ -67,16 +67,16 @@
 
       box-shadow: 0 6px $color-text-black;
       border: $border-width-sm solid $color-text-black;
-      border-radius: $border-radius-lg 0 0 $border-radius-lg;
+      border-radius: $border-radius-md 0 0 $border-radius-md;
       box-sizing: border-box;
-      background-color: white;
+      background-color: transparent;
 
       input {
         width: 100%;
 
         font-size: $font-size-md;
         padding: 0.35em 3rem 0.3rem 0.8rem;
-        border-radius: $border-radius-lg 0 0 $border-radius-lg;
+        border-radius: $border-radius-sm 0 0 $border-radius-sm;
         border: none;
         background-color: transparent;
       }
@@ -96,6 +96,7 @@
       font-size: $font-size-md;
       font-weight: 400;
       transition: 0.3s;
+      width: 30%;
       cursor: pointer;
 
       border-radius: 0 $border-radius-lg $border-radius-lg 0;

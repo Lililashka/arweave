@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import Slider from "react-slick";
 import { isMobile, isFirefox } from "react-device-detect";
+import FullWidthSection from '../components/FullWidthSection'
+
 
 type Props = {
   title: string,
@@ -56,45 +58,46 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
   }, [])
 
   return (
-    <section className="app-discovery-carousel">
+    <FullWidthSection className="app-discovery-carousel">
+      <h2>Explore the permaweb</h2><br/>
       <Slider {...slickSettings}>
         <AppDiscoveryCarouselItem
           title="Arweave web archive"
-          description="30% of web links break within two years. The traditional web is failing you.  Archive your favourite sites and sources, ensuring they exist forever."
+          description="The traditional web is failing us. 30% of web links break within two years. Archive your favourite sites and sources with confidence."
           url={webArchiveUrl}
           author={{ name: "Jane Doe", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Archive Now"
         />
         <AppDiscoveryCarouselItem
           title="Feedweave"
-          description="A decentralised, trustless blogging platform that knows who should own your data.  Spoiler: It is you."
+          description="A decentralised, trustless blogging platform that knows who should own your data. (Spoiler: It’s you)."
           url="https://google.com"
           author={{ name: "@literature", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Read More"
         />
         <AppDiscoveryCarouselItem
           title="Weavemail"
-          description="Big-tech has taken control of email. We no longer have ownership of our own identities.  Weavemail is a mail network that with integrity. It will never sell your data, show adverts, or violate your privacy."
+          description="Big-tech has taken control of email. We no longer have ownership of our own identities. Weavemail is a mail network with integrity. It will never sell your data, show adverts, or violate your privacy."
           url="https://google.com"
           author={{ name: "May Doe", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Get Your Address"
         />
         <AppDiscoveryCarouselItem
           title="Ownerless communities"
-          description="Content moderation policies frequently rip online communities apart, or allow trolls to run rampant.  Permaweb apps solve these problems by being ownerless. Their moderation is transparent and described in openly accessible code, enabling a new breed of decentralised online communities."
+          description="Content moderation policies tear online communities apart, inhibit new ones from forming, and allow trolls to run rampant. Permaweb apps solve these problems by being ownerless. Their moderation is transparent and described in openly accessible code, enabling a new breed of decentralised online communities."
           url="https://google.com"
           author={{ name: "@aokisok", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Join the Conversation"
         />
         <AppDiscoveryCarouselItem
           title="Explore the permaweb"
-          description="The permaweb already hosts hundreds of immutable and decentralised apps. Explore a selection of them here."
+          description="The permaweb hosts hundreds of immutable and decentralised apps. Explore a few here."
           url="https://google.com"
           author={{ name: "@cedriking", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Check Them Out"
         />
       </Slider>
-    </section >
+    </FullWidthSection >
   )
 }
 

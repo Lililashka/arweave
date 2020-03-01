@@ -60,14 +60,16 @@ const NewsletterSignup: React.FunctionComponent = ({
       <div className="newsletter-signup__inner">
         {isSucess ? renderThankyou() : (
           <div className="newsletter-signup__content">
-            <h1>Stay up to date with arweave</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+            <h2>Arweave is community owned and operated.</h2>
+            <p>The Arweave is built and run by people like you.<br/>
+            Have an amazing idea for an Arweave application? <a href="/">We’ll pay you to build it.</a><br/>
+            Have extra storage space? The network will <a href="/">The network will pay you to rent it.</a></p>
             <form className={validationMessage !== "" ? "error" : ""} onSubmit={onSubmit} noValidate>
               <div className="input-container">
-                <input type="email" placeholder="enter email" value={email} onChange={onChange} onFocus={onFocus} />
+                <input type="email" placeholder="no@spam.com" value={email} onChange={onChange} onFocus={onFocus} />
                 {isValidEmail && <img src="/images/icons/check-circle.svg" />}
               </div>
-              <button className="primary" type="submit" >Subscribe</button>
+              <button className="primary" type="submit" >JOIN US</button>
               {validationMessage !== "" && <p className="error">{validationMessage}</p>}
             </form>
           </div>
