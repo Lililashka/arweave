@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Validator from "validator"
+import jsonp from "jsonp"
 
 const NewsletterSignup: React.FunctionComponent = ({
 }) => {
@@ -30,14 +31,26 @@ const NewsletterSignup: React.FunctionComponent = ({
       return;
     }
 
-    setTimeout(() => { setIsSucess(true) }, 2000);
+    let url = "https://arweave.us19.list-manage.com/subscribe/post-json?u=1af1fb1c01c3c7a09aca8efdb&amp&id=440c6ab915";
+    url += "&EMAIL=" + email;
+    jsonp(url, { param: "c" }, (err, data) => {
+      if (err) {
+        setIsSucess(false);
+        setValidationMessage("! Registration failed.");
+      } else if (data.result !== "success") {
+        setIsSucess(false);
+        setValidationMessage(data.msg);
+      } else {
+        setIsSucess(true);
+      }
+    });
   }
 
   function renderThankyou() {
     return (
       <div className="newsletter-signup__content">
         <h1>Thank you for subscribing to arweave’s newsletter! </h1>
-        <p className="input-readonly-style">The email will be sent to: <br />kyles@arweave.org</p>
+        <p className="input-readonly-style">The email will be sent to: <br />{email}</p>
       </div>
     )
   }
