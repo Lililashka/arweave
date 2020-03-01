@@ -1,17 +1,17 @@
 .card-link-section {
   h1 {
     font-size: $font-size-xxl;
-    line-height: $font-size-xxl * 1.5;
+    line-height: $font-size-xxl * 1.4;
     color: $color-text-black;
 
     @media screen and (max-width: 45rem) and (min-width: 25rem) {
       font-size: $font-size-xxl;
-      line-height: $font-size-xxl * 1.2;
+      line-height: $font-size-xxl;
     }
 
     @include media-screen-extra-small {
       font-size: $font-size-xl;
-      line-height: $font-size-xl * 1.2;
+      line-height: $font-size-xl * 1.5;
     }
   }
 
@@ -83,7 +83,7 @@
       padding-bottom: $space-md;
 
       h1 {
-        line-height: $font-size-xxl * 1.2;
+        line-height: $font-size-xl * 1.5;
       }
     }
   }
@@ -110,7 +110,7 @@
       padding-bottom: $space-md;
 
       h1 {
-        line-height: $font-size-xxl * 1.2;
+        line-height: $font-size-xl * 1.5;
       }
     }
 

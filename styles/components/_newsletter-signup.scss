@@ -26,6 +26,11 @@
     h1 {
       font-size: $font-size-xxl;
       line-height: $font-size-xxl * 1.2;
+      
+      @include media-screen-extra-small {
+        font-size: $font-size-xl;
+        line-height: $font-size-xl * 1.5;
+      }
     }
 
     p {

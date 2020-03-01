@@ -91,7 +91,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
           description="The permaweb already hosts hundreds of immutable and decentralised apps. Explore a selection of them here."
           url="https://google.com"
           author={{ name: "@cedriking", image: "https://via.placeholder.com/100x100.png" }}
-          actionText="Check Them Out [-> Arweave Apps]"
+          actionText="Check Them Out"
         />
       </Slider>
     </section >

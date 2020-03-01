@@ -84,6 +84,9 @@
       left: 0;
       border-top: 0.5rem solid black;
     }
+    @include media-screen-small {
+      line-height: $font-size-xl * 1.5;
+    }
   }
 
   p.action-container {
@@ -96,6 +99,7 @@
     display: inline-block;
     min-width: 200px;
     transition: 0.3s;
+    font-family: $font-family-mono;
 
     &:hover {
       background-color: whitesmoke;

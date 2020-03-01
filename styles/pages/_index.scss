@@ -10,6 +10,12 @@
   .card-link-section:first-of-type h1 {
     @media screen and (min-width: 50rem) {
       font-size: $font-size-xxxl;
+      line-height: $font-size-xxl * 1.9;
+    }
+
+    @include media-screen-small {
+      font-size: $font-size-xl * 1.4;
+      line-height: $font-size-xxl;
     }
   }
 
