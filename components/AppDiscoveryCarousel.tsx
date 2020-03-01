@@ -65,7 +65,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
           title="Arweave web archive"
           description="The traditional web is failing us. 30% of web links break within two years. Archive your favourite sites and sources with confidence."
           url={webArchiveUrl}
-          author={{ name: "Jane Doe", image: "https://via.placeholder.com/100x100.png" }}
+          author={{ name: "feedweave.co", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Archive Now"
         />
         <AppDiscoveryCarouselItem
@@ -79,7 +79,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
           title="Weavemail"
           description="Big-tech has taken control of email. We no longer have ownership of our own identities. Weavemail is a mail network with integrity. It will never sell your data, show adverts, or violate your privacy."
           url="https://google.com"
-          author={{ name: "May Doe", image: "https://via.placeholder.com/100x100.png" }}
+          author={{ name: "@weavemail", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Get Your Address"
         />
         <AppDiscoveryCarouselItem

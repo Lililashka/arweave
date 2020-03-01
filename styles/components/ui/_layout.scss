@@ -26,12 +26,6 @@
       margin-top: $space-md;
       margin-left: auto;
       margin-right: auto;
-
-      padding-bottom: $space-lg;
-
-      @include media-screen-small {
-        padding-bottom: $space-md;
-      }
     }
 
     .page__content.noscroll {
