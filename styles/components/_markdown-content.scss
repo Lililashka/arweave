@@ -18,7 +18,14 @@
   a:active {
     color: $color-lighter-blue;
   }
-  
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -180px;
+    visibility: hidden;
+  }
+
   hr {
     margin-top: $space-sm;
     border: 1px dashed $color-black;

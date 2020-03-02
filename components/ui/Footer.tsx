@@ -7,30 +7,26 @@ const Footer: React.FunctionComponent = () => (
         <div className="footer__section space">
           <a href="/"><img src="/footer-logo.svg" /></a>
           <div className="links">
-            <a href="/mine/about">the permaweb</a>
-            <a>our technology</a>
-            <a>team</a>
-            <a>faqs</a>
-            <a>report a link</a>
+            <a href="/technology">Storage Endowment</a>
+            <a href="/technology#permaweb">Permaweb</a>
+            <a href="/technology#content-moderation">Content Moderation</a>
+            <a href="/technology#papers">Papers</a>
           </div>
         </div>
         <div className="footer__section space">
-          <h4>get started</h4>
+          <h4>Build</h4>
           <div className="links space_more">
-            <a>get free token</a>
-            <a>start archiving</a>
-            <a>start mining</a>
-            <a>arweave js</a>
-            <a>arweave deploy</a>
+            <a href="/build">Start</a>
+            <a href="/build#interfaces">Interfaces</a>
+            <a href="/build#resources">Resources</a>
           </div>
         </div>
         <div className="footer__section space">
-          <h4>documentation</h4>
+          <h4>Mine</h4>
           <div className="links space_more">
-            <a>get free token</a>
-            <a>start archiving</a>
-            <a>start mining</a>
-            <a>arweave js</a>
+            <a href="/mine/start">Start</a>
+            <a href="/mine/optimise">Optimise</a>
+            <a href="/mine/learn-more">Learn more</a>
           </div>
         </div>
         <div className="footer__section space">
