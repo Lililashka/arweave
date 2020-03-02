@@ -6,13 +6,14 @@ export const meta = {
 }
 export default WithLayout()
 
-# Mining Guide
+# Mining Guide 
+<br/>
 
 Want to start mining on Arweave? You've come to the right place! Get set up with this quick and easy guide, and join our awesome network of ever-growing miners.
 
 > **For any questions and support queries regarding mining on Arweave, we strongly recommend that you join our** [**Discord server**](https://discord.gg/DjAFMJc) **as this is the hub of our mining and developer communities. Here you will find plenty of community members and Arweave team members available to help you out** 🤖 
 
-## Install the Miner
+## **Install the Miner**
 
 Download the `.tar.gz` archive for your OS from the [releases page](https://github.com/ArweaveTeam/arweave/releases).
 
@@ -22,7 +23,7 @@ If your OS/platform architecture is not in the list, check the source code repos
 
 >It is also possible to set-up an Arweave mining environment on Windows using the ‘Windows Subsystem for Linux’ or a virtual machine environment.
 
-## Preparation: File Descriptors Limit <a id="preparation-file-descriptors-limit"></a>
+## **Preparation: File Descriptors Limit <a id="preparation-file-descriptors-limit"></a>**
 
 The number of available file descriptors affects the rate at which your node can process data. As the default limit assigned to user processes on most operating systems is usually low, we recommend increasing it.
 
@@ -44,7 +45,7 @@ You may also need to set a proper limit for the particular user. To set a user-l
 
 Open a new terminal session. To make sure the changes took effect, and the limit was increased, type `ulimit -n`. You can also change the limit for the current session via `ulimit -n 10000`
 
-## Running the Miner
+## **Running the Miner**
 
 Now you’re ready to start the mining process by using the following command from the Arweave directory: 
 
@@ -56,7 +57,7 @@ Now you’re ready to start the mining process by using the following command fr
 
 If you would like to see a log of your miner’s activity, you can run **‘./bin/logs -f’** in the Arweave directory in a different terminal.
 
-## Tuning the Miner
+## **Tuning the Miner**
 
 To get an additional performance boost, consider configuring huge memory pages in your OS.  
   
@@ -66,9 +67,9 @@ You can benchmark your machine's performance with different settings by running 
 
 It is recommended to reboot the machine after configuring huge pages and before running the miner, especially if the machine had a significant uptime before to the change. To make the configuration survive reboots, create `/etc/sysctl.d/local.conf` and put `vm.nr_hugepages=[YOUR NUMBER]` there.
 
-## Troubleshooting
+## **Troubleshooting**
 
-### Make sure your node is accessible on the Internet
+### • Make sure your node is accessible on the Internet
 
 An important part of the mining process is discovering blocks mined by other miners. Your node needs to be accessible from anywhere on the Internet so that your peers can connect with you and share their blocks.
 
@@ -88,7 +89,7 @@ Note that the polling mode is significantly less efficient and is not recommende
   
 Also note that if your node does not receive any blocks for a minute, even when the polling mode is not enabled, the node will ask its trusted peers for new blocks. This is a safety measure to avoid stalling.
 
-### Wait until the blocks are downloaded
+### • Wait until the blocks are downloaded
 
 The Arweave miner does not mine without data. For every new block in order to mine it, a random block from the past is required. It takes a few days to download all the blocks from the peers so do not expect the mining to be very intensive after the first launch. For example, if you have 10% of the total amount of blocks, you have a 10% chance for being able to participate in mining the next block.
 
@@ -96,7 +97,7 @@ The following log indicates the miner does not have a block required to mine the
 
 `=INFO REPORT==== 13-Mar-2019::11:02:20 === could_not_start_mining stored_recall_block_for_foreign_verification`
 
-### Bootstrapping a second miner faster
+### • Bootstrapping a second miner faster
 
 If you want to bootstrap another miner on a different machine, you can copy the downloaded data over from the first miner to bring it up to speed faster. Please follow these steps:
 
@@ -104,7 +105,7 @@ If you want to bootstrap another miner on a different machine, you can copy the 
 2. Copy the following folders to the new machine: `blocks`, `txs`, `wallet_lists`, `data`.
 3. Start both miners.
 
-### Run a miner on Windows
+### • Run a miner on Windows
 
 We do not recommend using Windows for mining because according to our experience it is less efficient and reliable. Nevertheless, mining on Windows is possible.
 
@@ -120,9 +121,21 @@ Windows Event Log is expected to have the following warning:
   
 `TCP/IP failed to establish an outgoing connection because the selected local endpoint was recently used to connect to the same remote endpoint. This error typically occurs when outgoing connections are opened and closed at a high rate, causing all available local ports to be used and forcing TCP/IP to reuse a local port for an outgoing connection. To minimize the risk of data corruption, the TCP/IP standard requires a minimum time period to elapse between successive connections from a given local endpoint to a given remote endpoint.`
 
-## Staying up to Date
+## **Staying up to Date**
 
-* Join our [Discord](https://discord.gg/3UTNZky) server
-* Join our mining [mailing list](https://mailchi.mp/fa68b561fd82/arweavemining)
+▸ Join our [Discord](https://discord.gg/3UTNZky) server
 
-Once you are successfully mining on the Arweave, you will need to stay up to date with new releases. [Join our mailing list](https://mailchi.mp/fa68b561fd82/arweavemining) to receive emails informing you that a new update has been released, along with the steps you need to take to stay up to speed. Updates that require you to perform an action within a certain time period in order to stay in sync with the network will be labeled ‘\[ACTION REQUIRED\]’. Keep an eye out for these messages, and if possible make sure that you add team@arweave.org to your email provider’s trusted senders list!
+▸ Join our mining [mailing list](https://mailchi.mp/fa68b561fd82/arweavemining) 
+
+
+
+Once you are successfully mining on the Arweave, you will need to stay up to date with new releases. 
+
+[Join our mailing list](https://mailchi.mp/fa68b561fd82/arweavemining) to receive emails informing you that a new update has been released, along with the steps you need to take to stay up to speed. 
+
+Updates that require you to perform an action within a certain time period in order to stay in sync with the network will be labeled ‘\[ACTION REQUIRED\]’. 
+
+Keep an eye out for these messages, and if possible make sure that you add team@arweave.org to your email provider’s trusted senders list!
+
+
+   

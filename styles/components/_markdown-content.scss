@@ -1,4 +1,24 @@
 .md-content {
+  padding-bottom: $space-md;
+
+  a:link {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: $color-blue;
+  }
+
+  a:hover {
+    color: $color-lighter-blue;
+  }
+
+  a:visited {
+    color: $color-blue;
+  }
+
+  a:active {
+    color: $color-lighter-blue;
+  }
+  
   hr {
     margin-top: $space-sm;
     border: 1px dashed $color-black;
@@ -6,6 +26,7 @@
 
   p {
     max-width: none;
+    margin-top: 0.4rem;
   }
 
   img[src*="#fullwidth"] {
@@ -14,7 +35,7 @@
   }
 
   img[src*="#thumbnail"] {
-    max-width: 20rem;
+    max-width: 30rem;
     height: auto;
     object-fit: contain;
   }
