@@ -35,6 +35,14 @@ $sidebar-width: 22rem;
     margin-left: $space-md;
     cursor: pointer;
 
+    box-shadow: none;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+
     div {
       width: 27px;
       height: 2px;
@@ -122,10 +130,16 @@ $sidebar-width: 22rem;
     z-index: 1;
     background: white;
 
-    &__inner {
-      padding: $space-md;
+    button {
+      font-family: "Roboto Mono", monospace;
+      margin-top: $space-md;
       float: right;
-      cursor: pointer;
+      box-shadow: none;
+      border: none;
+
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
 

@@ -1,6 +1,8 @@
 .menu-section {
-  *:focus {
-    outline: none;
+  :focus {
+    .rstm-tree-item--focused {
+      color: blue !important;
+    }
   }
 
   h5 {
@@ -11,6 +13,12 @@
 
   .tree-menu__container {
     margin-top: 0;
+
+    div:first-of-type {
+      &:focus {
+        color: red !important;
+      }
+    }
   }
 }
 

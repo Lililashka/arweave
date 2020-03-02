@@ -24,11 +24,12 @@ const Sidebar: React.FunctionComponent<Props> = ({
   return (
     <div className={`sidebar ${isOpen ? "open" : "closed"}`} >
       <nav>
-        <div className={`hamburger-icon ${isOpen ? "open" : "closed"}`} onClick={onHamburgerIconClick} >
+        <button className={`hamburger-icon ${isOpen ? "open" : "closed"}`}
+          onClick={onHamburgerIconClick} >
           <div></div>
           <div></div>
           <div></div>
-        </div>
+        </button>
       </nav>
       <div className={`sidebar__content-clone ${isOpen ? "open" : "closed"}`} />
       <div className={`sidebar__overlay ${isOpen ? "open" : "closed"}`} />
@@ -42,10 +43,10 @@ const Sidebar: React.FunctionComponent<Props> = ({
       >
         <div className={`sidebar__content ${isOpen ? "open" : "closed"}`}>
           <div className="close-icon">
-            <div className="close-icon__inner" onClick={onCloseClick}>
+            <button onClick={onCloseClick}>
               <img src="/images/icons/close.svg" />
               <span>{" "}close</span>
-            </div>
+            </button>
           </div>
           <div className='sidebar__content__inner'>
             <SidebarMenu closeSideBar={onCloseClick} />
