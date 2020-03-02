@@ -71,7 +71,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
         <AppDiscoveryCarouselItem
           title="Feedweave"
           description="A decentralised, trustless blogging platform that knows who should own your data. (Spoiler: It’s you)."
-          url="https://google.com"
+          url="https://feedweave.co/"
           author={{ name: "@literature", image: "https://via.placeholder.com/100x100.png" }}
           actionText="Read More"
         />
