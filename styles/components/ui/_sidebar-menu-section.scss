@@ -1,7 +1,17 @@
+.layout.no-outline-on-focus {
+  .menu-section {
+    :focus {
+      .rstm-tree-item--focused {
+        color: $color-black !important;
+      }
+    }
+  }
+}
+
 .menu-section {
   :focus {
     .rstm-tree-item--focused {
-      color: blue !important;
+      color: $color-blue !important;
     }
   }
 
