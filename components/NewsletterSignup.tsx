@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Validator from "validator"
-import jsonp from "jsonp"
+import Axios from "axios";
 
 const NewsletterSignup: React.FunctionComponent = ({
 }) => {
@@ -31,19 +31,22 @@ const NewsletterSignup: React.FunctionComponent = ({
       return;
     }
 
-    let url = "https://arweave.us19.list-manage.com/subscribe/post-json?u=1af1fb1c01c3c7a09aca8efdb&amp&id=440c6ab915";
-    url += "&EMAIL=" + email;
-    jsonp(url, { param: "c" }, (err, data) => {
-      if (err) {
+    Axios.post("https://x2xhw1l4vf.execute-api.eu-west-2.amazonaws.com/production/subscribe",
+      {
+        email
+      })
+      .then(function (response) {
+        if (!response.data.success) {
+          setIsSucess(false);
+          setValidationMessage(response.data.error);
+        } else {
+          setIsSucess(true);
+        }
+      })
+      .catch(function (error) {
         setIsSucess(false);
         setValidationMessage("! Registration failed.");
-      } else if (data.result !== "success") {
-        setIsSucess(false);
-        setValidationMessage(data.msg);
-      } else {
-        setIsSucess(true);
-      }
-    });
+      });
   }
 
   function renderThankyou() {
@@ -61,9 +64,9 @@ const NewsletterSignup: React.FunctionComponent = ({
         {isSucess ? renderThankyou() : (
           <div className="newsletter-signup__content">
             <h2>Arweave is community owned and operated.</h2>
-            <p>The Arweave is built and run by people like you.<br/>
-            Have <strong>an amazing idea for an Arweave application?</strong> &nbsp;We’ll pay you to build it.<br/>
-            Have <strong>extra storage space?</strong> &nbsp;The network will pay you to rent it.</p>
+            <p>The Arweave is built and run by people like you.<br />
+              Have <strong>an amazing idea for an Arweave application?</strong> &nbsp;We’ll pay you to build it.<br />
+              Have <strong>extra storage space?</strong> &nbsp;The network will pay you to rent it.</p>
             <form className={validationMessage !== "" ? "error" : ""} onSubmit={onSubmit} noValidate>
               <div className="input-container">
                 <input type="email" placeholder="no@spam.com" value={email} onChange={onChange} onFocus={onFocus} />
