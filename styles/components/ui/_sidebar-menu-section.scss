@@ -1,18 +1,6 @@
-.layout.no-outline-on-focus {
-  .menu-section {
-    :focus {
-      .rstm-tree-item--focused {
-        color: $color-black !important;
-      }
-    }
-  }
-}
-
 .menu-section {
-  :focus {
-    .rstm-tree-item--focused {
-      color: $color-blue !important;
-    }
+  *:focus {
+    outline: none;
   }
 
   h5 {

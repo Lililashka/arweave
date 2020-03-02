@@ -20,6 +20,10 @@ button {
     box-shadow: 0 4px $color-text-black;
     transform: translateY(4px);
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 button.primary {
