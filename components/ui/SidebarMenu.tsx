@@ -49,7 +49,7 @@ const getInvolvedTreeData = [
   },
   {
     key: 'grants-and-investments',
-    label: 'Grants and investments',
+    label: 'Grants and funding',
     nodes: [],
     url: '/get-involved/grants-funding'
   }
