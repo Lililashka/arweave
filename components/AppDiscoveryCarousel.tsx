@@ -47,7 +47,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
   var slickSettings = {
     arrows: false,
     infinite: false,
-    slidesToShow: 1,
+    slidesToShow: isMobile ? 1 : 2,
     slidesToScroll: 1,
     variableWidth: isMobile ? false : true
   };
@@ -59,7 +59,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
 
   return (
     <FullWidthSection className="app-discovery-carousel">
-      <h2>Explore the permaweb</h2><br/>
+      <h2>Explore the permaweb</h2><br />
       <Slider {...slickSettings}>
         <AppDiscoveryCarouselItem
           title="Arweave web archive"
