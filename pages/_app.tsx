@@ -17,13 +17,10 @@ export default class MyApp extends App {
         function getCookie(t){for(var n=t+"=",r=document.cookie.split(";"),e=0;e<r.length;e++){for(var i=r[e];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(n))return i.substring(n.length,i.length)}return""}
         var allowCookies = getCookie("does_allow_cookies_usage");
         if (allowCookies && allowCookies==="true") {
-          console.log("ALLOW ALLOW COOKIES", allowCookies)
           gtag('js', new Date());
           gtag('config', '${process.env.GA_MEASUREMENT_ID}', {
             page_path: window.location.pathname,
           });
-        } else {
-          console.log("NOT ALLOW COOKIES")
         }
       `
     };
