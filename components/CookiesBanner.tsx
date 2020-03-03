@@ -1,6 +1,5 @@
 import * as React from "react"
 import Cookies from "js-cookie"
-import Link from "next/link"
 
 const CookiesBanner: React.FunctionComponent = () => {
   const [shouldRender, setShouldRender] = React.useState(true);
@@ -40,9 +39,7 @@ const CookiesBanner: React.FunctionComponent = () => {
           <h3>Cookie helps us improve your experience.</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div>
-            <Link href="/cookies-policy">
-              <a>More about our cookies policy</a>
-            </Link>
+            <a href="/cookies-policy">More about our cookies policy</a>
           </div>
         </div>
         <div className="cookies-banner__actions">
