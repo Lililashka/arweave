@@ -1,6 +1,7 @@
 footer {
   background: transparent;
   padding: $space-lg;
+  padding-bottom: $space-sm !important;
   margin-top: 0;
 
   .footer__content {
@@ -9,6 +10,14 @@ footer {
 
   .footer__content__mobile {
     display: inline;
+
+    p {
+      font-size: $font-size-sm;
+    }
+  }
+
+  img {
+    width: 70%;
   }
 
   @include media-screen-large {
@@ -41,7 +50,42 @@ footer {
 .footer__content__mobile {
   p {
     text-align: center;
-    color: $color-super-light-gray;
+    color: $color-gray;
+  }
+}
+
+.footer__content__company {
+  text-align: justify;
+
+
+  p {
+    text-align: center;
+    color: $color-gray;
+    font-size: $font-size-sm;
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 3%;
+  }
+
+  hr {
+    border-bottom: 0.4px solid $color-gray;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .full-width-section__inner {
+    padding: 0px;
+    padding-top: $space-lg;
+    background: $color-dark-gray !important;
+  }
+
+  @include media-screen-medium {
+    display: none;
+  }
+
+  @include media-screen-small {
+    display: none;
   }
 }
 

@@ -20,6 +20,10 @@
       @include media-screen-small {
         padding: 0 $space-md;
       }
+
+      @include media-screen-medium {
+        padding: 0 $space-md;
+      }
     }
 
     .page__content {

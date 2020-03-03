@@ -1,4 +1,7 @@
 import * as React from "react"
+import FullWidthSection from '../FullWidthSection';
+
+
 
 const Footer: React.FunctionComponent = () => (
   <footer>
@@ -6,7 +9,6 @@ const Footer: React.FunctionComponent = () => (
       <div className="footer__content">
         <div className="footer__section space">
           <a href="/"><img src="/footer-logo.svg" /></a>
-          <hr/>
           <div className="links">
             <a href="/technology">Storage Endowment</a>
             <a href="/technology#permaweb">Permaweb</a>
@@ -38,6 +40,10 @@ const Footer: React.FunctionComponent = () => (
           </div>
         </div>
       </div>
+      <FullWidthSection className="footer__content__company">
+        <hr />
+        <p>© Copyright 2019. Minimum Spanning Technologies Limited (10889544). International House, 24 Holborn Viaduct, London, EC1A 2BN, United Kingdom.</p>
+      </FullWidthSection>
       <div className="footer__content__mobile">
         <hr />
         <p>© Copyrights 2020 Minimum Spanning Technologies Limited</p>
