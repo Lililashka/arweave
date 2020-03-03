@@ -78,7 +78,7 @@
 
 
 @mixin layout-grid($gap: $space-md) {
-  $target-width: calc(16% + 5rem);
+  $target-width: calc(16% + 3rem);
   $fallback-width: 18rem;
 
   display: flex;

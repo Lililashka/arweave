@@ -6,6 +6,7 @@ const Footer: React.FunctionComponent = () => (
       <div className="footer__content">
         <div className="footer__section space">
           <a href="/"><img src="/footer-logo.svg" /></a>
+          <hr/>
           <div className="links">
             <a href="/technology">Storage Endowment</a>
             <a href="/technology#permaweb">Permaweb</a>
@@ -30,32 +31,10 @@ const Footer: React.FunctionComponent = () => (
           </div>
         </div>
         <div className="footer__section space">
-          <h4>community</h4>
-          <div className="links">
-            <a href="https://github.com">
-              <div>
-                <img src="/images/socials/medium.svg" />
-                <span>github</span>
-              </div>
-            </a>
-            <a href="https://twitter.com">
-              <div>
-                <img src="/images/socials/medium.svg" />
-                <span>twitter</span>
-              </div>
-            </a>
-            <a href="https://discord.com">
-              <div>
-                <img src="/images/socials/medium.svg" />
-                <span>discord</span>
-              </div>
-            </a>
-            <a href="https://telegram.org">
-              <div>
-                <img src="/images/socials/medium.svg" />
-                <span>telegram</span>
-              </div>
-            </a>
+          <h4>Get involved</h4>
+          <div className="links space_more">
+            <a href="/get-involved/community">Community</a>
+            <a href="/get-involved/grants-funding">Grants & Funding</a>
           </div>
         </div>
       </div>

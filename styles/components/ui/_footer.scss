@@ -1,6 +1,6 @@
 footer {
   background: transparent;
-  padding: $space-md;
+  padding: $space-lg;
   margin-top: 0;
 
   .footer__content {
@@ -32,6 +32,9 @@ footer {
   
   hr {
     margin-top: $space-md;
+    width: 80%;
+    margin-left: 0px;
+    border: 0.4px solid whitesmoke;
   }
 }
 
@@ -43,7 +46,7 @@ footer {
 }
 
 .footer__content {
-  @include layout-grid($space-md*1.5);
+  @include layout-grid($space-sm);
 
   color: $color-super-light-gray;
 
