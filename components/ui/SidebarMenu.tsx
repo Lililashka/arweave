@@ -55,7 +55,7 @@ const getInvolvedTreeData = [
   },
   {
     key: 'boost',
-    label: 'Boost by Arweave',
+    label: 'Arweave Boost',
     nodes: [],
     url: 'https://boost.arweave.org/'
   }

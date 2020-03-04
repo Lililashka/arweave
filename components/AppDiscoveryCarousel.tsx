@@ -88,29 +88,29 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
       <Slider {...slickSettings}>
         <AppDiscoveryCarouselItem
           title="Arweave web archive"
-          description="The traditional web is failing us. 30% of web links break within two years. Archive your favourite sites and sources with confidence."
+          description="The traditional web is failing us. 30% of web links break within two years. Archive your favourite sites and sources forever on the permaweb."
           url={webArchiveUrl}
           author={{ name: "feedweave.co", image: "/images/builders/webarchive.png" }}
           actionText="Archive Now"
         />
         <AppDiscoveryCarouselItem
           title="Feedweave"
-          description="A decentralised, trustless blogging platform that knows who should own your data. (Spoiler: It’s you)."
+          description="A decentralised, trustless blogging platform that knows who should own your data (Spoiler: It’s you)."
           url="https://feedweave.co/"
           author={{ name: "@literature", image: "/images/builders/feedweave.png" }}
           actionText="Read More"
         />
         <AppDiscoveryCarouselItem
           title="Weavemail"
-          description="Big-tech has taken control of email. We no longer have ownership of our own identities. Weavemail is a mail network with integrity. It will never sell your data, show adverts, or violate your privacy."
+          description="Big-tech has taken control of email. Weavemail is a mail network with integrity -- never selling your data, showing adverts, or violating your privacy."
           url=" https://weavemail.app/"
           author={{ name: "@weavemail", image: "/images/builders/weavemail.png" }}
           actionText="Get Your Address"
         />
         <AppDiscoveryCarouselItem
           title="Ownerless communities"
-          description="Content moderation policies tear online communities apart, inhibit new ones from forming, and allow trolls to run rampant. Permaweb apps solve these problems by being ownerless. Their moderation is transparent and described in openly accessible code, enabling a new breed of decentralised online communities."
-          url="https://pr7gu7ba5czv.arweave.net/6RbaVQ-pmfL9E9gmTuOV6ZcNB7mTbqBHnqPhn8waxzw#/ "
+          description="Content moderation policies tear online communities apart. Permaweb apps solve these problems by being ownerless. Their moderation is transparent and described in code, enabling a new breed of decentralised online communities."
+          url="https://dforums.bloc.space"
           author={{ name: "@aokisok", image: "/images/builders/ownerless.png" }}
           actionText="Join the Conversation"
         />

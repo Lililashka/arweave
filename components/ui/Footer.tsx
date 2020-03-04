@@ -42,7 +42,7 @@ const Footer: React.FunctionComponent = () => (
       </div>
       <FullWidthSection className="footer__content__company">
         <hr />
-        <p>© Copyright 2019. Minimum Spanning Technologies Limited (10889544). International House, 24 Holborn Viaduct, London, EC1A 2BN, United Kingdom.</p>
+        <p>© Copyright 2020. Minimum Spanning Technologies Limited (10889544). International House, 24 Holborn Viaduct, London, EC1A 2BN, United Kingdom.</p>
       </FullWidthSection>
       <div className="footer__content__mobile">
         <hr />
