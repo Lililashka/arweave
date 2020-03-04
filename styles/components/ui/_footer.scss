@@ -38,7 +38,7 @@ footer {
   max-width: $page-container-width;
   margin-left: auto;
   margin-right: auto;
-  
+
   hr {
     margin-top: $space-sm;
     width: 80%;
@@ -55,8 +55,9 @@ footer {
 }
 
 .footer__content__company {
+  grid-column: 1 / -1;
+  padding-top: $space-lg;
   text-align: justify;
-
 
   p {
     text-align: center;
@@ -78,14 +79,6 @@ footer {
     padding: 0px;
     padding-top: $space-lg;
     background: $color-dark-gray !important;
-  }
-
-  @include media-screen-medium {
-    display: none;
-  }
-
-  @include media-screen-small {
-    display: none;
   }
 }
 

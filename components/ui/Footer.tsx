@@ -39,11 +39,11 @@ const Footer: React.FunctionComponent = () => (
             <a href="/get-involved/grants-funding">Grants & Funding</a>
           </div>
         </div>
+        <div className="footer__content__company">
+          <hr />
+          <p>© Copyright 2020. Minimum Spanning Technologies Limited (10889544). International House, 24 Holborn Viaduct, London, EC1A 2BN, United Kingdom.</p>
+        </div>
       </div>
-      <FullWidthSection className="footer__content__company">
-        <hr />
-        <p>© Copyright 2020. Minimum Spanning Technologies Limited (10889544). International House, 24 Holborn Viaduct, London, EC1A 2BN, United Kingdom.</p>
-      </FullWidthSection>
       <div className="footer__content__mobile">
         <hr />
         <p>© Copyrights 2020 Minimum Spanning Technologies Limited</p>
