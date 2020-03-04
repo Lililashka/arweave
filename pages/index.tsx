@@ -2,10 +2,9 @@ import { NextPage } from 'next'
 import 'aos/dist/aos.css'
 import Layout from '../components/ui/Layout'
 import CardLinkSection from '../components/CardLinkSection'
-import FullWidthSection from '../components/FullWidthSection'
 import NewsletterSignup from '../components/NewsletterSignup'
 import AppDiscoveryCarousel from '../components/AppDiscoveryCarousel'
-import ImageGrid from '../components/ImageGrid'
+import LogoSection from '../components/LogoSection'
 
 const Home: NextPage = () => {
   return (
@@ -34,11 +33,7 @@ const Home: NextPage = () => {
         />
       <AppDiscoveryCarousel />
       <NewsletterSignup />
-      <FullWidthSection className="images-grid-container">
-        <ImageGrid images={["/images/partners/pn-a16z.png", "/images/partners/pn-techstar.png", "/images/partners/pn-coinbase.png", "/images/partners/pn-multicoin.png"]} />
-        <ImageGrid images={["/images/partners/pn-1kx.png", "/images/partners/pn-iwf.png", "/images/partners/pn-usv.png"]} />
-
-      </FullWidthSection>
+      <LogoSection />
     </Layout>
   )
 };
