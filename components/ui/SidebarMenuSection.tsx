@@ -67,7 +67,9 @@ const SidebarMenuSection: React.FunctionComponent<Props> = ({
             if (!url) return
             if (isSameLocationWithHashtag(url, window.location.href)) {
               closeSideBar();
-              window.location.href = url;
+              setTimeout(() => {
+                window.location.href = url;
+              }, 400);
             }
             else window.location.href = url;
           }} >
