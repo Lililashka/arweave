@@ -1,18 +1,30 @@
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  grid-column-gap: $space-md;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-column-gap: $space-xs;
   text-align: center;
+  padding-left: $space-xl * 1.2;
+  padding-right: $space-xl * 1.2;
+
+  @include media-screen-small {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    padding-left: $space-sm;
+    padding-right: $space-sm;
+  }
 
   div {
     margin: auto;
   }
 
   img {
-    max-width: 50%;
-    height: 100%;
+    max-width: 80%;
+    height: auto;
     padding-top: $space-sm;
 
     object-fit: contain;
+
+    @include media-screen-small {
+      max-width: 85%;
+    }
   }
 }

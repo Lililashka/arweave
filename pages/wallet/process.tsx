@@ -80,6 +80,7 @@ const WalletProcess: NextPage = () => {
         <p>We've sent you an email with instruction and a wallet download link.</p>
         <p className="bold">From: team@arweave.org</p>
         <p className="bold">{`To: ${userEmail}`}</p>
+        <br/>
       </div>
     )
   }
