@@ -29,7 +29,7 @@ const AppDiscoveryCarouselItem: React.FunctionComponent<Props> = ({
     <div className="app-discovery-carousel-item">
       <div className="app-discovery-carousel-item__inner">
         <div className="author-container">
-          <span>create by&nbsp;</span><span className="name">{authorName}</span>
+          <span>created by&nbsp;</span><span className="name">{authorName}</span>
           <img src={authorImage} />
         </div>
         <h1>{title}</h1>

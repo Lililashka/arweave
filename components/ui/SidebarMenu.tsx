@@ -52,6 +52,12 @@ const getInvolvedTreeData = [
     label: 'Grants and funding',
     nodes: [],
     url: '/get-involved/grants-funding'
+  },
+  {
+    key: 'boost',
+    label: 'Boost by Arweave',
+    nodes: [],
+    url: 'https://boost.arweave.org/'
   }
 ];
 
