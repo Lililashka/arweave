@@ -5,6 +5,8 @@
   text-align: center;
   padding-left: $space-xl * 1.2;
   padding-right: $space-xl * 1.2;
+  align-content: space-between;
+  justify-content: center;
 
   @include media-screen-small {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -17,9 +19,9 @@
   }
 
   img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-    padding-top: $space-sm;
+    padding-right: $space-sm;
 
     object-fit: contain;
 
