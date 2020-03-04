@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, createRef } from "react"
 import Slider from "react-slick";
 import { isMobile, isFirefox } from "react-device-detect";
-import FullWidthSection from '../components/FullWidthSection'
-
+import FullWidthSection from '../components/FullWidthSection';
 
 type Props = {
   title: string,
@@ -51,14 +50,40 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
     slidesToScroll: 1,
     variableWidth: isMobile ? false : true
   };
-  const [webArchiveUrl, setWebArchiveUrl] = useState("https://chrome.google.com/webstore/detail/arweave/iplppiggblloelhoglpmkmbinggcaaoc")
+  const [webArchiveUrl, setWebArchiveUrl] = useState("https://chrome.google.com/webstore/detail/arweave/iplppiggblloelhoglpmkmbinggcaaoc");
+  const sliderRef = createRef<HTMLDivElement>();
+  const cursorRef = createRef<HTMLImageElement>();
 
   useEffect(() => {
     if (isFirefox) setWebArchiveUrl("https://addons.mozilla.org/en-US/firefox/addon/arweave/");
+
+    sliderRef.current!.addEventListener("mousemove", handleMouseMoveEvent);
+    sliderRef.current!.addEventListener("mouseout", handleMouseOutEvent);
+
+    return () => {
+      sliderRef.current!.removeEventListener("mousemove", handleMouseMoveEvent);
+      sliderRef.current!.removeEventListener("mouseout", handleMouseOutEvent);
+    };
   }, [])
 
+  function handleMouseMoveEvent(event: MouseEvent) {
+    const cursor = cursorRef.current!;
+    const slider = sliderRef.current!;
+    const sliderBoundingRectTop = slider.getBoundingClientRect().top;
+    if (cursor.hidden) cursor.hidden = false;
+
+    const leftPos = Math.round(event.clientX - (cursor.width / 2));
+    const topPos = Math.round(event.clientY - sliderBoundingRectTop - (cursor.height / 2));
+    cursor.style.left = `${leftPos}px`;
+    cursor.style.top = `${topPos}px`;
+  }
+
+  function handleMouseOutEvent(event: MouseEvent) {
+    cursorRef.current!.hidden = true;
+  }
+
   return (
-    <FullWidthSection className="app-discovery-carousel">
+    <FullWidthSection className="app-discovery-carousel" refObject={sliderRef}>
       <h2>Explore the permaweb</h2><br />
       <Slider {...slickSettings}>
         <AppDiscoveryCarouselItem
@@ -97,6 +122,7 @@ const AppDiscoveryCarousel: React.FunctionComponent = () => {
           actionText="Check Them Out"
         />
       </Slider>
+      <img ref={cursorRef} className="cursor" src="/images/icons/drag-cursor.png" alt="Cursor" />
     </FullWidthSection >
   )
 }

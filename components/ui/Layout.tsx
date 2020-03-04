@@ -1,5 +1,4 @@
 import { useState, useEffect, createRef } from 'react'
-import { isMobile } from "react-device-detect";
 import AOS from 'aos'
 import Head from 'next/head'
 import Footer from './Footer'

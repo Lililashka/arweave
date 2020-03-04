@@ -1,11 +1,19 @@
-
 .app-discovery-carousel {
   overflow: visible;
   background-color: whitesmoke;
   padding-left: $space-sm * 3 !important;
   padding-top: $space-sm !important;
 
-  cursor: url('/images/icons/clickdrag.svg'), n-resize;
+  position: relative;
+  cursor: none;
+
+  img.cursor {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -200px;
+    pointer-events: none;
+  }
 
   @include media-screen-small {
     padding-left: 0px !important;
@@ -96,6 +104,7 @@
       left: 0;
       border-top: 0.5rem solid black;
     }
+
     @include media-screen-small {
       line-height: $font-size-xl * 1.5;
     }
