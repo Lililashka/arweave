@@ -18,8 +18,8 @@ type Props = {
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
-  title = 'Arweave',
-  desc = 'Arweave is a global, permanent hard drive built on two novel technologies: the blockweave, a derivative of the blockchain, and proof of access, a custom incentivised proof of work algorithm. These innovations provide truly permanent data storage for the very first time and at a massive scale.',
+  title = 'arweave',
+  desc = 'arweave is a global, permanent hard drive built on two novel technologies: the blockweave, a derivative of the blockchain, and proof of access, a custom incentivised proof of work algorithm. These innovations provide truly permanent data storage for the very first time and at a massive scale.',
   className = "",
   withHexagonBg = false,
   withAos = false
