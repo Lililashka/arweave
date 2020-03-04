@@ -6,7 +6,7 @@ const learnTreeData = [
     key: 'intro',
     label: 'What is Arweave?',
     nodes: [],
-    url: '/'
+    url: '/#arweave-intro'
   },
   {
     key: 'technology',
