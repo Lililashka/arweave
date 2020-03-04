@@ -10,6 +10,7 @@ const WalletComplete: NextPage = () => {
         <p>Check your keyfile in your computer’s download folder or other places your have specified. Keep it safe!</p>
         <p>Do you know that the tokens can be used for many different things?</p>
         <p>Why don’t you try out archiving a web page, or perhaps deploying your own web app?</p>
+        <p className="disclaimer">You'll need to open a wallet with 1 free AR in order to begin storing data on the Perma Web.</p>
       </div>
       <div className="actions-container">
         <a href="/" className="btn">deploy a web app</a>

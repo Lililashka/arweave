@@ -1,5 +1,13 @@
 .md-content {
-  padding-bottom: $space-md;
+  padding-bottom: $space-xl;
+  padding-left: $space-lg;
+  padding-right: $space-lg;
+
+  @include media-screen-small {
+    padding-bottom: $space-sm;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
   a:link {
     text-decoration: underline;
@@ -25,6 +33,7 @@
     top: -180px;
     visibility: hidden;
   }
+}
 
   hr {
     margin-top: $space-sm;
@@ -52,4 +61,5 @@
     display: block;
     margin: 0 auto;
   }
-}
+
+  

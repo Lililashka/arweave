@@ -66,7 +66,7 @@ const NewsletterSignup: React.FunctionComponent = ({
             <h2>Arweave is community owned and operated.</h2>
             <p>The Arweave is built and run by people like you.<br />
               Have <strong>an amazing idea for an Arweave application?</strong> &nbsp;We’ll pay you to build it.<br />
-              Have <strong>extra storage space?</strong> &nbsp;The network will pay you to rent it.</p>
+              Have <strong>extra storage space?</strong> &nbsp;The network will pay you to rent it.</p><br/>
             <form className={validationMessage !== "" ? "error" : ""} onSubmit={onSubmit} noValidate>
               <div className="input-container">
                 <input type="email" placeholder="no@spam.com" value={email} onChange={onChange} onFocus={onFocus} />

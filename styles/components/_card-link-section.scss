@@ -5,7 +5,7 @@
     color: $color-text-black;
 
     @media screen and (max-width: 45rem) and (min-width: 25rem) {
-      font-size: $font-size-xxl;
+      font-size: $font-size-xl;
       line-height: $font-size-xxl;
     }
 
@@ -33,7 +33,7 @@
     -moz-box-shadow: 8px 8px 0px 0px #222326;
     box-shadow: 8px 8px 0px 0px #222326;
 
-    border: black 1px solid;
+    border: $color-black 1px solid;
     border-radius: 5px;
 
     background: white;
@@ -47,16 +47,21 @@
     h1,
     p {
       text-align: center;
-      color: $color-text-black
+      color: $color-text-black;
+      padding-top: 0px !important;
+
+      @include media-screen-medium {
+        padding-top: 0px !important;
+      }
+      @include media-screen-small {
+        padding-top: 0px !important;
+      }
     }
 
     h1 {
       margin-bottom: $space-md;
     }
 
-    p {
-      margin-top: 0;
-    }
 
     a.btn {
       margin-left: auto;

@@ -10,7 +10,7 @@ const Error: NextPage = () => {
       <a className="btn" href="/">
         BACK TO HOME
       </a>
-      <br/>
+      <br/><br/>
     </Layout>
   )
 }

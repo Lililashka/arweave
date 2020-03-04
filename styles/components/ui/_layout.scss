@@ -10,18 +10,21 @@
     overflow-x: hidden;
     flex: 1 0 auto;
 
+    .homepage {
+      padding-bottom: 0px !important;
+    }
+
     .page {
       width: 100%;
       max-height: 100%;
       margin-top: $navbar-height;
-      padding: 0 $space-xl * 1.5;
-      padding-bottom: $space-xl;
-
-      @include media-screen-small {
-        padding: 0 $space-md;
-      }
+      padding: 0 $space-lg * 1.5;
+      padding-bottom: 0px;
 
       @include media-screen-medium {
+        padding: 0 $space-md;
+      }
+      @include media-screen-small {
         padding: 0 $space-md;
       }
     }
@@ -42,6 +45,7 @@
     }
   }
 }
+
 
 // FOR DEV
 // nav,
