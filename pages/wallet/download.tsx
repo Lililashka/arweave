@@ -62,13 +62,14 @@ const WalletDownload: NextPage = () => {
         <p>Nobody (including the arweave project) can help you recover your wallet if the key file is lost.</p>
         <p className="bold">So, remember to keep it safe!</p>
         <form onSubmit={onSubmit} noValidate>
-          <label data-tip ref={checkboxLabelRef}>
+          <label className="checkbox-container" data-tip ref={checkboxLabelRef}>
             <input
               name="isGoing"
               type="checkbox"
               checked={isChecked}
               onChange={onCheckboxChange}
               onFocus={onCheckboxFocus} />
+            <span className="checkmark"></span>
             <ReactTooltip place="top" type="error" effect="solid" event="no-event">
               <span>{validationMessage}</span>
             </ReactTooltip>

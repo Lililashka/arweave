@@ -52,12 +52,13 @@ const Wallet: NextPage = () => {
         <p>You first need some Arweave tokens which we’d like to send you for free together with a wallet.</p>
         <p>You'll be amazed how far it'll go!</p>
         <form onSubmit={onSubmit} noValidate>
-          <label data-tip ref={checkboxLabelRef}>
+          <label className="checkbox-container" data-tip ref={checkboxLabelRef}>
             <input
               type="checkbox"
               checked={isChecked}
               onChange={onCheckboxChange}
               onFocus={onCheckboxFocus} />
+            <span className="checkmark"></span>
             <ReactTooltip place="top" type="error" effect="solid" event="no-event">
               <span>{validationMessage}</span>
             </ReactTooltip>
