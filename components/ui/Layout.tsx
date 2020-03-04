@@ -6,7 +6,7 @@ import NavBar from './Navbar'
 import Sidebar from './Sidebar'
 import CookiesBanner from '../CookiesBanner'
 import HexagonBackground from '../HexagonBackground'
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks, BodyScrollOptions } from 'body-scroll-lock';
 
 type Props = {
   title?: string,
@@ -36,12 +36,13 @@ const Layout: React.FunctionComponent<Props> = ({
 
   useEffect(() => {
     if (isSidebarOpen) {
-      disableBodyScroll(targetElement);
+      const options: BodyScrollOptions = {
+        reserveScrollBarGap: true
+      }
+      disableBodyScroll(targetElement, options);
     } else {
       enableBodyScroll(targetElement);
     }
-
-    if (withAos) AOS.init({ disable: isSidebarOpen });
 
     return () => {
       clearAllBodyScrollLocks();
@@ -62,8 +63,8 @@ const Layout: React.FunctionComponent<Props> = ({
         <meta name="description" content={desc} />
         <meta name="format-detection" content="telephone=no" />
       </Head >
+      <Sidebar toogleSidebarCallback={toogleSidebar} />
       <div className="layout__inner">
-        <Sidebar toogleSidebarCallback={toogleSidebar} />
         {withHexagonBg && <HexagonBackground />}
         <NavBar />
         <div className="page">
