@@ -47,7 +47,7 @@
     "react-simple-tree-menu": "^1.1.14",
     "react-slick": "^0.25.2",
     "react-tooltip": "^4.0.3",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@types/node": "^13.1.6",
